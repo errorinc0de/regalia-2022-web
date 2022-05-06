@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-		"tw-watch": "npx tailwindcss -i ./tailwind-directives.css -o ./src/tailwind.css --watch"
+    "tw-watch": "npx tailwindcss -i ./tailwind-directives.css -o ./src/tailwind.css --watch",
+    "format": "npx prettier --write"
   },
   "devDependencies": {
     "prettier": "^2.6.2",
