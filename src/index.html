@@ -58,33 +58,119 @@
     <link type="text/plain" rel="author" href="/humans.txt" />
   </head>
 
-  <body class="bg-background font-primary text-text">
-    <nav data-navbar>
-      <!-- add navbar -->
+  <body class="scroll-smooth bg-background font-primary text-text">
+    <img
+      class="absolute left-0 z-0 h-screen object-cover object-center"
+      src="images/bg_home.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 z-[1] bg-background opacity-40"></div>
+
+    <nav
+      data-navbar
+      class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear"
+    >
+      <div
+        class="flex w-full flex-col items-center justify-center space-y-2 px-6 py-2"
+      >
+        <div class="flex items-center justify-between space-x-2">
+          <div class="h-9 w-5 shrink-0">
+            <img
+              class="block h-full w-full"
+              src="./images/logo_rcciit.png"
+              alt="RCCIIT logo"
+            />
+          </div>
+          <p class="text-mini font-bold">
+            Rcc Institute of Information Technology
+            <span class="mt-1 block text-micro font-bold">
+              Canal South Road. Beliaghata. Kolkata - 700 015
+            </span>
+          </p>
+        </div>
+        <div class="flex w-full items-center justify-between font-medium">
+          <a href="#home">Home</a>
+          <a href="#event">Events</a>
+          <a href="#artist">Artists</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
     <!-- HOME -->
-    <section data-home class="p h-screen w-full">
-      <h1 class="text-title font-black">Home</h1>
+    <section id="home" class="relative z-[2] h-screen w-full pt-24">
+      <div class="z-10 px-6">
+        <div class="mt-8 space-y-2">
+          <p class="font-medium">Presenting the annual cultural fest</p>
+          <h1 class="text-5xl font-bold tracking-wide">Regalia '22</h1>
+        </div>
+
+        <div class="mt-4 text-2xl font-bold">
+          <h3>Relive.</h3>
+          <h3>Rejoice.</h3>
+          <h3>Rejuvinate.</h3>
+        </div>
+
+        <!-- button -->
+        <a
+          href="#"
+          class="mt-6 inline-block rounded-full bg-accent px-5 py-2 font-bold"
+          >See featured artists</a
+        >
+
+        <div class="absolute bottom-10">
+          <div class="h-40 w-40">
+            <img
+              class="block h-full w-full"
+              src="./images/logo_regalia.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+          <p class="mt-1 font-light">19 to 20 May</p>
+          <div class="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <p class="font-bold">Nazrul Mancha</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="background: linear-gradient(to top, #0d0d0d, rgba(0, 0, 0, 0))"
+        class="absolute bottom-0 z-50 h-16 w-full"
+      ></div>
     </section>
 
     <!-- EVENTS -->
-    <section data-home class="p h-screen w-full">
+    <section id="event" class="p h-screen w-full pt-24">
       <h1 class="text-title font-black">Events</h1>
     </section>
 
     <!-- ARTISTS -->
-    <section data-home class="p h-screen w-full">
+    <section id="artist" class="p h-screen w-full pt-24">
       <h1 class="text-title font-black">Artists</h1>
     </section>
 
     <!-- ABOUT -->
-    <section data-home class="p h-screen w-full">
+    <section id="about" class="p h-screen w-full pt-24">
       <h1 class="text-title font-black">About</h1>
     </section>
 
     <!-- CONTACT -->
-    <section data-home class="p h-screen w-full">
+    <section id="contact" class="p h-screen w-full pt-24">
       <h1 class="text-title font-black">Contact</h1>
     </section>
 
