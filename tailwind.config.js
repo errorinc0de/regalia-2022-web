@@ -3,17 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {},
-    colors: {
-      transparent: 'transparent',
-      background: '#0D0D0D',
-      text: '#E6E6E6',
-      accent: '#0B74BF',
-      debug: '#9D174D',
-    },
-    fontFamily: {
-      primary: ['Montserrat', ...defaultTheme.fontFamily.sans],
-    },
+    extend: {
+      screens: {
+        'm': {'raw': '(max-width: 600px)'}, // m as mobile
+        't': {'raw': '(max-width: 786px)'}, // t as tablet
+      },
     fontSize: {
       title: [
         '5rem',
@@ -42,6 +36,19 @@ module.exports = {
           lineHeight: '1.5rem',
         },
       ],
+      mini: ['0.625rem'],
+      micro: ['0.5rem']
+    },
+    },
+    colors: {
+      transparent: 'transparent',
+      background: '#0D0D0D',
+      text: '#E6E6E6',
+      accent: '#0B74BF',
+      debug: '#9D174D',
+    },
+    fontFamily: {
+      primary: ['Montserrat', ...defaultTheme.fontFamily.sans],
     },
     fontWeight: {
       light: 300,
