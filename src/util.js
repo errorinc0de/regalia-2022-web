@@ -1,8 +1,8 @@
 // console log
-const log = console.debug
+export const log = console.log
 // query selector
-const el = (selector, type = document) => type.querySelector(selector)
+export const el = (selector, type = document) => type.querySelector(selector)
 // query selector all
-const elall = (selector, type = document) => [
+export const elall = (selector, type = document) => [
   ...type.querySelectorAll(selector),
 ]
