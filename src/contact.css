@@ -59,6 +59,10 @@
     color: #0B74BF;
 }
 
+.contact-email-section{
+    margin-top: 3rem;
+}
+
 .contacts .contacts-item a{
     font-style: normal;
     font-weight: 400;
@@ -101,6 +105,10 @@
 
 .contacts-item a{
     text-decoration: none;
+}
+
+.follow-us{
+    margin-top: 3rem;
 }
 
 .follow-us h2{
@@ -167,12 +175,20 @@
 }
 
 @media only screen and (max-width: 820px) {
+    .follow-us{
+        margin-top: 0rem;
+    }
+
+    .contact-email-section{
+        margin-top: 50px;
+    }
+
     .contact{
         height: auto;
     }
 
     .contact-head{
-        margin-bottom: -1em;
+        margin-bottom: -40px;
         font-size: 60px;
         line-height: 75px;
     }
@@ -184,7 +200,7 @@
 
     .contact-us{
         margin-top: 50px;
-        width: 350px;
+        width: 312px;
     }
 
     .contact-us .contacts .contacts-item a{
@@ -193,13 +209,13 @@
     }
 
     .contact-head-6{
-        font-size: 18px;
+        font-size: 14px;
         line-height: 17px;
     }
 
     .email-us{
         margin-top: -50px;
-        width: 350px;
+        width: 312px;
     }
 
     .email-us a{
@@ -227,9 +243,9 @@
     }
 
     .follow-us h2{
-        margin-left: 20px;
+        margin-left: 13px;
         margin-top: -30px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         text-align: start;
     }
 
@@ -237,5 +253,10 @@
         margin-bottom: 5px;
         font-size: 36px;
         line-height: 43px;
+    }
+
+    .platforms{
+        margin-left: 8px;
+        justify-content: start;
     }
 }
