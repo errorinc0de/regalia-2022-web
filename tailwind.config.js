@@ -12,14 +12,12 @@ module.exports = {
       title: [
         '5rem',
         {
-          letterSpacing: '0.25rem',
           lineHeight: '5rem',
         },
       ],
       'sub-title': [
         '2.25rem',
         {
-          letterSpacing: '0rem',
           lineHeight: '2.5rem',
         },
       ],

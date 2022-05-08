@@ -17,8 +17,8 @@ const slider = el('div[data-carousel]')
 onscroll = () => {
 // add background on scroll
   pageYOffset > 10
-    ? nav.classList.add('bg-debug')
-    : nav.classList.remove('bg-debug')
+    ? nav.classList.add('bg-background')
+    : nav.classList.remove('bg-background')
 
   //TODO add active to current link
 
