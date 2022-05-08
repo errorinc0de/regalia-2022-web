@@ -40,3 +40,7 @@ images.forEach(image => {
     </div>
   `
 })
+
+// Hide "artist" section and link
+// remove the line when completed
+elall('[data-wip]').forEach(el => el.classList.add('hidden'))

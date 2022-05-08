@@ -1236,6 +1236,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 2rem;
   }
 
+  .md\:text-title{
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.25rem;
+  }
+
   .md\:hover\:bg-accent:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(11 116 191 / var(--tw-bg-opacity));
