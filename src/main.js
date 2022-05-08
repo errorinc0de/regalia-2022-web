@@ -12,7 +12,7 @@ const section_artist = el('section[data-artist]')
 const section_about = el('section[data-about]')
 const section_contact = el('section[data-contact]')
 
-const carousel_cotainer = el('div[data-carousel]')
+const slider = el('div[data-carousel]')
 
 onscroll = () => {
 // add background on scroll
@@ -25,3 +25,18 @@ onscroll = () => {
 }
 
 // TODO add carousels
+let images = []
+
+for (let i=1; i<=74; i++) {
+  const path = './images/carousel/'
+  const imgSrc = `${path}${i}.jpg`
+  images.push(imgSrc)
+}
+
+images.forEach(image => {
+  slider.innerHTML += `
+    <div class="snap-center w-4/5 sm:w-3/5 min-h-full shrink-0 rounded-xl overflow-hidden shadow-lg shadow-[#0a0a0a]">
+      <img src="${image}" class="block w-full h-full object-cover object-center" />
+    </div>
+  `
+})
