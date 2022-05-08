@@ -1,6 +1,7 @@
 .contact{
     width: 100%;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    /* fallin-rain: using tailwind class "scroll-mt-20" instead */
 }
 
 .contact-head{
@@ -13,19 +14,18 @@
     line-height: 95px;
     text-align: center;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .contact-head-6{
     width: auto;
-    margin: 3rem auto;
+    margin: 0.75rem auto 3rem;
     font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 21px;
+    font-weight: bold;
+    font-size: 1rem;
     text-align: center;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform: normal;
     color: #0B74BF;
 }
 
