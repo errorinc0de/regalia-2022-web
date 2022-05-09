@@ -1,5 +1,6 @@
 .contact{
     width: 100%;
+    height: fit-content;
     /* padding-top: 50px; */
     /* fallin-rain: using tailwind class "scroll-mt-20" instead */
 }
@@ -7,6 +8,8 @@
 .contact-head{
     width: auto;
     margin: auto;
+    font-size: 5rem !important;
+    margin-bottom: 2rem;
     color: #E6E6E6;
     font-style: normal;
     font-weight: 900;
@@ -15,18 +18,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: capitalize;
-}
-
-.contact-head-6{
-    width: auto;
-    margin: 0.75rem auto 3rem;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: normal;
-    color: #0B74BF;
 }
 
 .contact-middle-section{
@@ -60,7 +51,7 @@
 }
 
 .contact-email-section{
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .contacts .contacts-item a{
@@ -108,7 +99,7 @@
 }
 
 .follow-us{
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .follow-us h2{
@@ -152,6 +143,7 @@
 
 .platforms{
     width: 100%;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
 }
@@ -188,8 +180,8 @@
     }
 
     .contact-head{
-        margin-bottom: -40px;
-        font-size: 60px;
+        margin-bottom: 50px;
+        font-size: 60px !important;
         line-height: 75px;
     }
 
@@ -231,6 +223,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: space-between;
         width: 95%;
@@ -257,6 +250,7 @@
 
     .platforms{
         margin-left: 8px;
+        margin-bottom: 0rem;
         justify-content: start;
     }
 }
