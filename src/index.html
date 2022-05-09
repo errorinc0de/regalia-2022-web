@@ -87,55 +87,133 @@
       class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents"
     >
       <div
-        class="flex w-full flex-col items-center justify-between space-y-2 px-6 md:px-12 py-2 sm:flex-row md:py-4"
+        class="container mx-auto py-4 px-6 md:px-10 flex flex-wrap items-center justify-between"
       >
-        <a class="flex items-center justify-between space-x-4" href="https://www.rcciit.org/" target="_blank">
-          <div class="h-9 w-5 shrink-0">
-            <img
-              class="block h-full w-full"
-              src="./images/logo_rcciit.png"
-              alt="RCCIIT logo"
-            />
-          </div>
-          <p class="w-max text-mini font-bold sm:text-base sm:leading-tight">
+        <a href="https://www.rcciit.org/" class="flex items-center">
+          <img
+            src="images/logo_rcciit.png"
+            class="mr-3 h-9 w-5"
+            alt="RCCIIT Logo"
+          />
+          <p
+            class="self-center whitespace-nowrap text-mini font-bold"
+          >
             RCC Institute of Information Technology
-            <span class="mt-1 block text-micro font-bold sm:text-mini">
+            <span class="mt-1 block text-micro font-medium sm:text-mini">
               Canal South Road. Beliaghata. Kolkata - 700 015
             </span>
           </p>
         </a>
-
-        <div
-          class="flex w-full items-center justify-between font-medium sm:font-bold sm:w-min sm:text-base md:space-x-6"
+        <button
+          data-collapse-toggle="mobile-menu"
+          type="button"
+          class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
         >
-          <a data-navlink href="#home">Home</a>
-          <a data-navlink data-wip href="#artist">Artists</a>
-          <a data-navlink href="#gallery">Gallery</a>
-          <a data-navlink href="#contact">Contact</a>
+          <span class="sr-only">Open menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="hidden h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+          <ul
+            class="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-bold"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block rounded bg-accent py-2 pr-4 pl-3 text-text md:bg-transparent md:p-0"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#artist"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Artist"
+                >Artist</a
+              >
+            </li>
+            <li>
+              <a
+                href="events/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Events</a
+              >
+            </li>
+            <li data-wip>
+              <a
+                href="about/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <!-- HOME -->
-    <section data-home id="home" class="relative z-[2] min-h-screen w-full pt-24">
+    <section
+      data-home
+      id="home"
+      class="relative z-[2] min-h-screen w-full pt-24"
+    >
       <div class="z-10 px-6 md:px-12">
-        <div class="mt-6 sm:mt-8 space-y-2">
+        <div class="mt-6 space-y-2 sm:mt-8">
           <p class="font-medium">Presenting the annual cultural fest</p>
-          <h1
-            class="text-5xl font-bold sm:text-title sm:font-black"
-          >
+          <h1 class="text-5xl font-bold sm:text-title sm:font-black">
             Regalia '22
           </h1>
         </div>
 
-        <div class="mt-6 sm:mt-12 sm:space-y-4 text-2xl font-bold sm:text-sub-title">
+        <div
+          class="mt-6 text-2xl font-bold sm:mt-12 sm:space-y-4 sm:text-sub-title"
+        >
           <h3>Relive.</h3>
           <h3>Rejoice.</h3>
           <h3>Rejuvinate.</h3>
         </div>
 
         <!-- links as button -->
-        <div class="mt-8 flex space-x-6">
+        <div class="mt-6 flex space-x-6">
           <a
             href="event/"
             class="inline-block rounded-full bg-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-opacity-70"
@@ -146,7 +224,6 @@
             class="inline-block rounded-full border border-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-accent md:hover:bg-opacity-70"
             >About Regalia</a
           >
-          
         </div>
 
         <div class="absolute bottom-16 sm:right-12">
@@ -186,24 +263,46 @@
     </section>
 
     <!-- ARTISTS -->
-    <section data-artist data-wip id="artist" class="px-6 md:px-12 min-h-screen w-full scroll-mt-20">
+    <section
+      data-artist
+      data-wip
+      id="artist"
+      class="min-h-screen w-full scroll-mt-20 px-6 md:px-12"
+    >
       <h1 class="text-title font-black">Artists</h1>
     </section>
 
     <!-- GALLERY -->
-    <section data-gallery id="gallery" class="px-6 md:px-12 w-full space-y-6 scroll-mt-20 mb-12">
-      <h1 class="text-5xl md:text-title font-black">Gallery</h1>
-      <p class="text-accent mt-6">See some of the best photos of Regalia</p>
+    <section
+      data-gallery
+      id="gallery"
+      class="mb-12 w-full scroll-mt-20 space-y-6 px-6 md:px-12"
+    >
+      <h1 class="text-5xl font-black md:text-title">Gallery</h1>
+      <p class="mt-6 text-accent">See some of the best photos of Regalia</p>
       <!-- carousel container -->
-      <div data-carousel style="::-webkit-scrollbar {display: none;} -ms-overflow-style: none; scrollbar-width: none;"
-        class="w-full py-6 h-[calc(100vh/10rem)] sm:h-[calc(100vh-15rem)] flex space-x-6 sm:space-x-12 flex-shrink-0 snap-x snap-mandatory overflow-x-scroll select-none will-change-transform">
+      <div
+        data-carousel
+        style="
+          ::-webkit-scrollbar {
+            display: none;
+          }
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        "
+        class="flex h-[calc(100vh/10rem)] w-full flex-shrink-0 select-none snap-x snap-mandatory space-x-6 overflow-x-scroll py-6 will-change-transform sm:h-[calc(100vh-15rem)] sm:space-x-12"
+      >
         <!-- generate from js -->
       </div>
     </section>
 
     <!-- CONTACT -->
     <!-- helped by @infuman69 -->
-    <section data-contact id="contact" class="contact w-full px-6 md:px-8 scroll-mt-20">
+    <section
+      data-contact
+      id="contact"
+      class="contact w-full scroll-mt-20 px-6 md:px-8"
+    >
       <h1 class="contact-head">Contact</h1>
       <h6 class="contact-head-6">For any query reach out to us</h6>
       <div class="contact-middle-section">
@@ -270,9 +369,24 @@
       </div>
     </section>
 
-    <footer data-footer>
-      <!-- add footer -->
-    </footer>
+    <footer class="w-full mt-6 p-6 md:px-12 rounded-lg shadow md:flex md:items-center md:justify-between">
+    <span class="text-base text-accent sm:text-center">© 2022 <a href="https://regalia_website" class="hover:underline">Regalia™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center pt-3 text-base text-text sm:mt-0">
+        <li>
+            <a href="about/" class="mr-4 hover:underline md:mr-6 ">About</a>
+        </li>
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Facebook</a>
+        </li>
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Instagram</a>
+        </li>
+        <li>
+            <a href="#contact" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+</footer>
 
     <!-- PRELOADER -->
     <div data-preloader aria-hidden="true" aria-label="">

@@ -58,5 +58,7 @@ module.exports = {
       black: 900,
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
