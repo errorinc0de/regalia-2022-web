@@ -857,6 +857,34 @@ input[type="range"]::-ms-fill-lower{
   margin-right: 1rem;
 }
 
+.-mt-8{
+  margin-top: -2rem;
+}
+
+.-mt-12{
+  margin-top: -3rem;
+}
+
+.-mt-14{
+  margin-top: -3.5rem;
+}
+
+.-mt-16{
+  margin-top: -4rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mt-0{
+  margin-top: 0px;
+}
+
+.-mt-2{
+  margin-top: -0.5rem;
+}
+
 .block{
   display: block;
 }
@@ -943,6 +971,21 @@ input[type="range"]::-ms-fill-lower{
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.translate-y-6{
+  --tw-translate-y: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-4{
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-12{
+  --tw-translate-y: 3rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .select-none{
@@ -1073,6 +1116,11 @@ input[type="range"]::-ms-fill-lower{
   background-color: rgb(11 116 191 / var(--tw-bg-opacity));
 }
 
+.bg-debug{
+  --tw-bg-opacity: 1;
+  background-color: rgb(157 23 77 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1164,12 +1212,6 @@ input[type="range"]::-ms-fill-lower{
   line-height: 5rem;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.05rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -1217,10 +1259,6 @@ input[type="range"]::-ms-fill-lower{
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.outline{
-  outline-style: solid;
-}
-
 .transition-colors{
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -1229,8 +1267,32 @@ input[type="range"]::-ms-fill-lower{
   transition-duration: 150ms;
 }
 
+.transition{
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform{
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200{
   transition-duration: 200ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 .ease-linear{
