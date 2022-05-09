@@ -1162,7 +1162,6 @@ input[type="range"]::-ms-fill-lower{
 .text-title{
   font-size: 5rem;
   line-height: 5rem;
-  letter-spacing: 0.25rem;
 }
 
 .text-base{
@@ -1348,13 +1347,11 @@ input[type="range"]::-ms-fill-lower{
   .sm\:text-title{
     font-size: 5rem;
     line-height: 5rem;
-    letter-spacing: 0.25rem;
   }
 
   .sm\:text-sub-title{
     font-size: 2.25rem;
     line-height: 2.5rem;
-    letter-spacing: 0rem;
   }
 
   .sm\:font-black{
@@ -1440,7 +1437,12 @@ input[type="range"]::-ms-fill-lower{
   .md\:text-title{
     font-size: 5rem;
     line-height: 5rem;
-    letter-spacing: 0.25rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
   }
 
   .md\:font-bold{
