@@ -27,7 +27,9 @@
 
 
 .card-collection{
-    margin: 10%;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: -webkit-flex;
 	display: flex;
 	-webkit-justify-content: space-between;
@@ -128,7 +130,7 @@ button:hover{
     width: 1700px;
     height: 900px;
     max-width: 80%;
-    
+
 }
 
 .modal.active{
