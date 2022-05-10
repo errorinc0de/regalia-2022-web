@@ -4,6 +4,13 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
+    colors: {
+      transparent: 'transparent',
+      background: '#0D0D0D',
+      text: '#F2F2F2',
+      accent: '#0B74BF',
+      debug: '#9D174D',
+    },
       screens: {
         'm': {'raw': '(max-width: 600px)'}, // m as mobile
         't': {'raw': '(max-width: 786px)'}, // t as tablet
@@ -38,13 +45,6 @@ module.exports = {
       mini: ['0.625rem'],
       micro: ['0.5rem']
     },
-    },
-    colors: {
-      transparent: 'transparent',
-      background: '#0D0D0D',
-      text: '#F2F2F2',
-      accent: '#0B74BF',
-      debug: '#9D174D',
     },
     fontFamily: {
       primary: ['Montserrat', ...defaultTheme.fontFamily.sans],

@@ -58,6 +58,9 @@
       --bg: #0d0d0d;
       --text: #f2f2f2;
     }
+* {
+	-webkit-tap-highlight-color: transparent;
+}
     .preloader-page {
       position: fixed;
       top: 0;
@@ -216,6 +219,7 @@
             </li>
             <li>
               <a
+								data-wip
                 href="#artist"
                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
                 aria-current="Artist"
@@ -282,13 +286,16 @@
         <div class="mt-6 flex items-center space-x-6 text-sm sm:text-base">
           <a
             href="events/"
-            class="inline-block rounded-full bg-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-opacity-70"
+						class="text-background bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >See events</a
           >
           <a
+						data-wip
             href="about/"
-            class="inline-block rounded-full border border-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-accent md:hover:bg-opacity-70"
-            >About Regalia</a
+						class="text-background border border-red hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+						About Regalia
+					</a
           >
         </div>
 
