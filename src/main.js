@@ -17,7 +17,7 @@ onscroll = () => {
     : nav.classList.remove('bg-background')
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function () {
   new Splide('.splide', {
     perPage: 2,
     type: 'loop',
@@ -37,12 +37,12 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     },
   }).mount()
-});
+})
 
 // preloader animation
-const LANDING = {};
-LANDING.intro = document.querySelector(".preloader-page");
-LANDING.path = LANDING.intro.querySelector("path");
+const LANDING = {}
+LANDING.intro = document.querySelector('.preloader-page')
+LANDING.path = LANDING.intro.querySelector('path')
 
 const svgAnimation = () => {
   el('body').classList.remove('overflow-hidden')
@@ -50,19 +50,19 @@ const svgAnimation = () => {
   anime({
     targets: LANDING.intro,
     duration: 2000,
-    easing: "easeInOutSine",
-    translateY: "-200vh"
-  });
+    easing: 'easeInOutSine',
+    translateY: '-200vh',
+  })
 
   anime({
     targets: LANDING.path,
     duration: 1500,
-    easing: "easeInOutSine",
-    d: LANDING.path.getAttribute("pathdata:id")
-  });
-};
+    easing: 'easeInOutSine',
+    d: LANDING.path.getAttribute('pathdata:id'),
+  })
+}
 
-el(".preloader-page").addEventListener("click", svgAnimation);
+el('.preloader-page').addEventListener('click', svgAnimation)
 
 // Hide "artist" section and link
 // remove the line when completed
