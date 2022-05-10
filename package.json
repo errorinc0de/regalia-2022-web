@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tw-watch": "npx tailwindcss -i ./tailwind-directives.css -o ./src/tailwind.css --watch",
+    "tw-watch": "npx tailwindcss -i ./tailwind-directives.css -o ./src/tailwind.css --watch --minify",
+    "tw-build": "npx tailwindcss -o ./src/build.css --minify",
     "format": "npx prettier --write"
   },
   "devDependencies": {
@@ -16,6 +17,7 @@
     "vite": "^2.9.7"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.0.1",
     "flowbite": "^1.4.5"
   }
 }

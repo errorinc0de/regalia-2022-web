@@ -2,46 +2,67 @@ import './tailwind.css'
 
 import 'flowbite'
 
-// import '../node_modules/flowbite/dist/flowbite.js'
+import Splide from '@splidejs/splide'
 
-const jpges =
-  import.meta.glob('./images/carousel/*.jpg')
-const images = []
+import '@splidejs/splide/css'
 
-import {
-  el,
-  elall,
-  log
-} from './util.js'
+import { el, elall, log } from './util.js'
 
 const nav = el('nav[data-navbar]')
 
-const slider = el('div[data-carousel]')
-
 onscroll = () => {
   // add background on scroll
-  scrollY > 10 ?
-    nav.classList.add('bg-background') :
-    nav.classList.remove('bg-background')
+  scrollY > 10
+    ? nav.classList.add('bg-background')
+    : nav.classList.remove('bg-background')
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('.splide', {
+    perPage: 2,
+    type: 'loop',
+    autoplay: true,
+    focus: 'center',
+    lazyLoad: 'nearby',
+    height: '30rem',
+    gap: '3rem',
+    breakpoints: {
+      1180: {
+        perPage: 1,
+      },
+      640: {
+        perPage: 1,
+        gap: '2rem',
+        height: '16rem',
+      },
+    },
+  }).mount()
+})
 
-for (const path in jpges) {
-  jpges[path]().then(() => {
-    const p = new URL(path,
-      import.meta.url)
-    images.push(p.href)
+// preloader animation
+const LANDING = {}
+LANDING.intro = document.querySelector('.preloader-page')
+LANDING.path = LANDING.intro.querySelector('path')
+
+const svgAnimation = () => {
+  el('body').classList.remove('overflow-hidden')
+
+  anime({
+    targets: LANDING.intro,
+    duration: 2000,
+    easing: 'easeInOutSine',
+    translateY: '-200vh',
+  })
+
+  anime({
+    targets: LANDING.path,
+    duration: 1500,
+    easing: 'easeInOutSine',
+    d: LANDING.path.getAttribute('pathdata:id'),
   })
 }
-onload = () => {
-  images.forEach(image => {
-    slider.innerHTML += `
-      <div class="snap-center w-4/5 sm:w-3/5 min-h-full shrink-0 rounded-xl overflow-hidden shadow-lg shadow-[#0a0a0a]">
-        <img src="${image}" class="block w-full h-full object-cover object-center" />
-      </div>
-    `
-  })
-}
+
+el('.preloader-page').addEventListener('click', svgAnimation)
 
 // Hide "artist" section and link
 // remove the line when completed

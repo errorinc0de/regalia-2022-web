@@ -34,6 +34,7 @@ module.exports = {
           lineHeight: '1.5rem',
         },
       ],
+      sm: ['0.8rem', { letterSpacing: '0.0125rem' }],
       mini: ['0.625rem'],
       micro: ['0.5rem']
     },
@@ -41,7 +42,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       background: '#0D0D0D',
-      text: '#E6E6E6',
+      text: '#F2F2F2',
       accent: '#0B74BF',
       debug: '#9D174D',
     },
