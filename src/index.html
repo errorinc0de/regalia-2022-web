@@ -58,11 +58,99 @@
     <link type="text/plain" rel="author" href="/humans.txt" />
 
     <link rel="stylesheet" href="./contact.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
+
+
+
+  <style>
+
+.preloader-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1100;
+  background-color: #0D0D0D;
+  cursor: pointer;
+}
+.preloader-page .loader__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader-page .loader__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #F2F2F2;
+  margin: 0;
+}
+.preloader-page .loader__text > h3 {
+  font-size: calc(70% + 0.5vw);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+.preloader-page .loader__text > p {
+  font-size: calc(70% + 0.1vw);
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.preloader-page .loader__circle {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  animation-name: SpinAround;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  box-shadow: 0px 0px 1px white;
+}
+.preloader-page .loader__circle:nth-of-type(1) {
+  animation-direction: reverse;
+  transform-origin: 49.6% 49.8%;
+}
+.preloader-page .loader__circle:nth-of-type(2) {
+  transform-origin: 49.5% 48.8%;
+}
+.preloader-page .loader__shape {
+  width: 100%;
+  margin: -0.5rem 0 0 0;
+  position: relative;
+}
+.preloader-page .shape {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  fill: #0D0D0D;
+}
+@keyframes SpinAround {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+  </style>
+  
   <body
-    class="relative bg-background font-primary text-text"
-    style="margin: 0px"
+    class="relative bg-background font-primary text-text m-0 overflow-hidden"
   >
     <img
       class="absolute z-0 h-screen w-full object-cover object-center"
@@ -201,7 +289,7 @@
         </div>
 
         <!-- links as button -->
-        <div class="mt-6 flex space-x-6 text-sm sm:text-base items-center">
+        <div class="mt-6 flex items-center space-x-6 text-sm sm:text-base">
           <a
             href="events/"
             class="inline-block rounded-full bg-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-opacity-70"
@@ -275,65 +363,125 @@
           class="splide__track h-[calc(100vh/10rem) sm:h-[calc(100vh-15rem)]"
         >
           <ul data-carousel class="splide__list w-full will-change-transform">
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/1.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/1.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/2.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/2.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/3.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/3.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/4.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/4.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/5.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/5.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/6.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/6.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/7.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/7.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/8.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/8.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/9.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/9.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/10.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/10.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/11.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/11.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/12.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/12.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/13.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/13.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/14.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/14.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/15.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/15.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/16.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/16.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/17.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/17.jpg"
+                class="block h-full w-full rounded-lg object-cover object-top"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/18.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/18.jpg"
+                class="block h-full w-full rounded-lg object-cover object-top"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/19.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/19.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
-            <li class="splide__slide">
-              <img data-splide-lazy="./images/carousel/20.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            <li class="splide__slide" data-splide-interval="2000">
+              <img
+                data-splide-lazy="./images/carousel/20.jpg"
+                class="block h-full w-full rounded-lg object-cover object-center"
+              />
             </li>
           </ul>
         </div>
@@ -439,9 +587,40 @@
     </footer>
 
     <!-- PRELOADER -->
-    <div data-preloader aria-hidden="true" aria-label="">
-      <!-- add preloader -->
+    <!-- <div data-preloader aria-hidden="true" aria-label=""> -->
+    <!--   add preloader -->
+    <!--   <div> -->
+    <!--     <div> -->
+    <!--       <img src="./images/logo_regalia.svg" alt="" > -->
+    <!--     </div> -->
+    <!--     <div> -->
+    <!--       <h1>Regalia 2k22</h1> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+
+    
+
+<!-- PRELOADER -->
+<div class="preloader-page">
+  <div class="loader__wrapper">
+    <div class="preloader-page__loader">
+      <div class="loader__text">
+        <h3>Regalia 2022</h3>
+        <p>Click to start</p>
+      </div>
+      <span class="loader__circle"></span>
+      <span class="loader__circle"></span>
     </div>
+  </div>
+  <div class="loader__shape">
+    <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800">
+      <path d="M -44,-50 C -52.71,28.52 15.86,8.186 184,14.69 383.3,22.39 462.5,12.58 638,14 835.5,15.6 987,6.4 1194,13.86 1661,30.68 1652,-36.74 1582,-140.1 1512,-243.5 15.88,-589.5 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
+    </svg>
+  </div>
+</div>
+
+
 
     <!-- (do not edit below) -->
     <script type="module" src="/main.js"></script>

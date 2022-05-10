@@ -42,7 +42,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       background: '#0D0D0D',
-      text: '#E6E6E6',
+      text: '#F2F2F2',
       accent: '#0B74BF',
       debug: '#9D174D',
     },
