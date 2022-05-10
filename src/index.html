@@ -201,7 +201,7 @@
         </div>
 
         <!-- links as button -->
-        <div class="mt-6 flex space-x-6">
+        <div class="mt-6 flex space-x-6 text-sm sm:text-base items-center">
           <a
             href="events/"
             class="inline-block rounded-full bg-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-opacity-70"
@@ -269,12 +269,74 @@
       <h1 class="text-5xl font-black md:text-title">Gallery</h1>
       <p class="mt-6 text-accent">See some of the best photos of Regalia</p>
       <!-- carousel container -->
-      <div
-        data-carousel
-        style="scrollbar-width: none"
-        class="flex h-[calc(100vh/10rem)] w-full flex-shrink-0 select-none snap-x snap-mandatory space-x-6 overflow-x-scroll py-6 will-change-transform sm:h-[calc(100vh-15rem)] sm:space-x-12"
-      >
-        <!-- generate from js -->
+      <div class="splide">
+        <div
+          style="scrollbar-width: none"
+          class="splide__track h-[calc(100vh/10rem) sm:h-[calc(100vh-15rem)]"
+        >
+          <ul data-carousel class="splide__list w-full will-change-transform">
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/1.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/2.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/3.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/4.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/5.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/6.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/7.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/8.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/9.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/10.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/11.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/12.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/13.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/14.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/15.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/16.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/17.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/18.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/19.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+            <li class="splide__slide">
+              <img data-splide-lazy="./images/carousel/20.jpg" class="block w-full h-full object-cover object-center rounded-lg" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 

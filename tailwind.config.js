@@ -34,6 +34,7 @@ module.exports = {
           lineHeight: '1.5rem',
         },
       ],
+      sm: ['0.8rem', { letterSpacing: '0.0125rem' }],
       mini: ['0.625rem'],
       micro: ['0.5rem']
     },
