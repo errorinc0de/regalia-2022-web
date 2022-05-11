@@ -10,6 +10,12 @@
   min-height: 1024px;
 }
 
+.previous {
+  line-height: 40%;
+  background-color: #b4f0f5cc;
+  color: black;
+}
+
 .headtext {
   position: absolute;
   width: 250px;
@@ -209,7 +215,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal::-webkit-scrollbar-thumb {
-  height: 20%;
+  height: 2%;
   background-color: rgba(239, 239, 247, 0.863); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   /* creates padding around scroll thumb */
@@ -268,11 +274,9 @@ a {
     font-weight: 100;
     top: 3%;
     left: 80%;
-    bottom: 90%;
+    bottom: 80%;
   }
-  #card-image {
-    height: 50%;
-  }
+  
   .name {
     top: 50%;
   }
