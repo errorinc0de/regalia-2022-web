@@ -1,3 +1,14 @@
+const modules = import.meta.glob('./images/*.webp')
+const gallery = ref([{}])
+
+for (const path in modules) {
+  modules[path]().then(() => {
+    const p = new URL(path, import.meta.url)
+    gallery.value.push(p)
+  })
+}
+
+
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
