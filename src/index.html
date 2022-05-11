@@ -336,6 +336,95 @@
       class="min-h-screen w-full scroll-mt-20 px-6 md:px-12"
     >
       <h1 class="text-title font-black">Artists</h1>
+
+      <!-- CARD -->
+
+      <div
+        class="max-w-sm rounded-lg border border-gray-200 bg-gray-700 shadow-md"
+      >
+        <div class="flex justify-end px-4 pt-4">
+          <button
+            id="dropdownButton"
+            data-dropdown-toggle="dropdown"
+            class="hidden rounded-lg p-1.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 sm:inline-block"
+            type="button"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+              ></path>
+            </svg>
+          </button>
+
+          <div
+            id="dropdown"
+            class="z-10 hidden w-44 list-none divide-y divide-gray-100 rounded bg-white text-base shadow"
+            style="
+              position: absolute;
+              inset: auto auto 0px 0px;
+              margin: 0px;
+              transform: translate(614px, 3321px);
+            "
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <ul class="py-1" aria-labelledby="dropdownButton">
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >Edit</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >Export Data</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-4 text-sm text-red-600 hover:bg-gray-100"
+                  >Delete</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col items-center pb-10">
+          <img
+            class="mb-3 h-24 w-24 rounded-full shadow-lg"
+            src="/docs/images/people/profile-picture-3.jpg"
+            alt="Bonnie image"
+          />
+          <h5 class="mb-1 text-xl font-medium text-gray-900">
+            Bonnie Green
+          </h5>
+          <span class="text-sm text-gray-500"
+            >Visual Designer</span
+          >
+          <div class="mt-4 flex space-x-3 lg:mt-6">
+            <a
+              href="#"
+              class="inline-flex items-center rounded-lg bg-blue-700 py-2 px-4 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              >Add friend</a
+            >
+            <a
+              href="#"
+              class="inline-flex items-center rounded-lg border border-gray-300 bg-white py-2 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
+              >Message</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- GALLERY -->

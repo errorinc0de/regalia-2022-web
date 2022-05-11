@@ -66,4 +66,4 @@ el('.preloader-page').addEventListener('click', svgAnimation)
 
 // Hide "artist" section and link
 // remove the line when completed
-elall('[data-wip]').forEach(el => el.classList.add('hidden'))
+// elall('[data-wip]').forEach(el => el.classList.add('hidden'))
