@@ -1,5 +1,7 @@
+import './events.css'
+
 const modules = import.meta.glob('./images/*.webp')
-const gallery = ref([{}])
+const gallery = []
 
 for (const path in modules) {
   modules[path]().then(() => {
@@ -7,7 +9,6 @@ for (const path in modules) {
     gallery.value.push(p)
   })
 }
-
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')

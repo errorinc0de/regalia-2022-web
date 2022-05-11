@@ -11,7 +11,7 @@ import { el, elall, log } from './util.js'
 const nav = el('nav[data-navbar]')
 
 const modules = import.meta.glob('./images/carousel/*.jpg')
-const gallery = ref([{}])
+const gallery = []
 
 for (const path in modules) {
   modules[path]().then(() => {
@@ -19,7 +19,7 @@ for (const path in modules) {
     gallery.value.push(p)
   })
 }
-log(gallery)
+
 onscroll = () => {
   // add background on scroll
   scrollY > 10
