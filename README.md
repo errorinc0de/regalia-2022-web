@@ -21,4 +21,3 @@ npm run tw-build
 - Publish the *deploy* folder to your host provider
 
 To preview the production build run ```npm run preview```
-
