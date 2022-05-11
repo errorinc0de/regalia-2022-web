@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: deploy
-          path: deploy
+          path: /
 
   deploy-build:
     needs: build
