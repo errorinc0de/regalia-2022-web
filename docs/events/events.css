@@ -224,7 +224,7 @@ a {
   color: rgba(134, 248, 248, 0.788);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   div.headtext {
     display: flex;
     justify-content: flex-start;
@@ -244,8 +244,7 @@ a {
   }
 
   .card-image{
-    width: 100%;
-    max-height: fit-content;
+    height: 8%;
   }
 
   .name {
