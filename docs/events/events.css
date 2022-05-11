@@ -243,6 +243,11 @@ a {
     margin-top: 8rem;
   }
 
+  .card-image{
+    width: 100%;
+    max-height: fit-content;
+  }
+
   .name {
     font-size: 2rem;
   }
