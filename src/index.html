@@ -58,6 +58,9 @@
       --bg: #0d0d0d;
       --text: #f2f2f2;
     }
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
     .preloader-page {
       position: fixed;
       top: 0;
@@ -109,7 +112,7 @@
       animation-duration: 2s;
       animation-fill-mode: both;
       animation-timing-function: linear;
-      box-shadow: 0px 0px 1px white;
+      box-shadow: 0px 0px 1px var(--text);
     }
     .preloader-page .loader__circle:nth-of-type(1) {
       animation-direction: reverse;
@@ -150,111 +153,111 @@
     />
     <div class="absolute inset-0 z-[1] h-screen bg-background opacity-40"></div>
 
-    <nav
-      data-navbar
-      class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents"
-    >
-      <div
-        class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 md:px-10"
-      >
-        <a href="https://www.rcciit.org/" class="flex items-center">
-          <img
-            src="images/logo_rcciit.png"
-            class="mr-3 h-9 w-5"
-            alt="RCCIIT Logo"
-          />
-          <p class="self-center whitespace-nowrap text-mini font-bold">
-            RCC Institute of Information Technology
-            <span class="mt-1 block text-micro font-medium sm:text-mini">
-              Canal South Road. Beliaghata. Kolkata - 700 015
-            </span>
-          </p>
-        </a>
-        <button
-          data-collapse-toggle="mobile-menu"
-          type="button"
-          class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <svg
-            class="hidden h-6 w-6"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
-          <ul
-            class="mt-4 flex flex-col overflow-hidden rounded-lg bg-background md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-sm md:font-bold"
-          >
-            <li>
-              <a
-                href="#home"
-                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#artist"
-                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                aria-current="Artist"
-                >Artist</a
-              >
-            </li>
-            <li>
-              <a
-                href="events/"
-                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                >Events</a
-              >
-            </li>
-            <li data-wip>
-              <a
-                href="about/"
-                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                >Gallery</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-                aria-current="Contact"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- <nav -->
+    <!--   data-navbar -->
+    <!--   class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents" -->
+    <!-- > -->
+    <!--   <div -->
+    <!--     class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 md:px-10" -->
+    <!--   > -->
+    <!--     <a href="https://www.rcciit.org/" class="flex items-center"> -->
+    <!--       <img -->
+    <!--         src="images/logo_rcciit.png" -->
+    <!--         class="mr-3 h-9 w-5" -->
+    <!--         alt="RCCIIT Logo" -->
+    <!--       /> -->
+    <!--       <p class="self-center whitespace-nowrap text-mini font-bold"> -->
+    <!--         RCC Institute of Information Technology -->
+    <!--         <span class="mt-1 block text-micro font-medium sm:text-mini"> -->
+    <!--           Canal South Road. Beliaghata. Kolkata - 700 015 -->
+    <!--         </span> -->
+    <!--       </p> -->
+    <!--     </a> -->
+    <!--     <button -->
+    <!--       data-collapse-toggle="mobile-menu" -->
+    <!--       type="button" -->
+    <!--       class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" -->
+    <!--       aria-controls="mobile-menu" -->
+    <!--       aria-expanded="false" -->
+    <!--     > -->
+    <!--       <span class="sr-only">Open menu</span> -->
+    <!--       <svg -->
+    <!--         class="h-6 w-6" -->
+    <!--         fill="currentColor" -->
+    <!--         viewBox="0 0 20 20" -->
+    <!--         xmlns="http://www.w3.org/2000/svg" -->
+    <!--       > -->
+    <!--         <path -->
+    <!--           fill-rule="evenodd" -->
+    <!--           d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" -->
+    <!--           clip-rule="evenodd" -->
+    <!--         ></path> -->
+    <!--       </svg> -->
+    <!--       <svg -->
+    <!--         class="hidden h-6 w-6" -->
+    <!--         fill="currentColor" -->
+    <!--         viewBox="0 0 20 20" -->
+    <!--         xmlns="http://www.w3.org/2000/svg" -->
+    <!--       > -->
+    <!--         <path -->
+    <!--           fill-rule="evenodd" -->
+    <!--           d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" -->
+    <!--           clip-rule="evenodd" -->
+    <!--         ></path> -->
+    <!--       </svg> -->
+    <!--     </button> -->
+    <!--     <div class="hidden w-full md:block md:w-auto" id="mobile-menu"> -->
+    <!--       <ul -->
+    <!--         class="mt-4 flex flex-col overflow-hidden rounded-lg bg-background md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-sm md:font-bold" -->
+    <!--       > -->
+    <!--         <li> -->
+    <!--           <a -->
+    <!--             href="#home" -->
+    <!--             class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             >Home</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <a -->
+    <!--             href="#artist" -->
+    <!--             class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             aria-current="Artist" -->
+    <!--             >Artist</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <a -->
+    <!--             href="events/" -->
+    <!--             class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             >Events</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--         <li data-wip> -->
+    <!--           <a -->
+    <!--             href="about/" -->
+    <!--             class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             >About</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <a -->
+    <!--             href="#gallery" -->
+    <!--             class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             >Gallery</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--         <li> -->
+    <!--           <a -->
+    <!--             href="#contact" -->
+    <!--             class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--             aria-current="Contact" -->
+    <!--             >Contact</a -->
+    <!--           > -->
+    <!--         </li> -->
+    <!--       </ul> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </nav> -->
 
     <!-- HOME -->
     <section
@@ -282,14 +285,16 @@
         <div class="mt-6 flex items-center space-x-6 text-sm sm:text-base">
           <a
             href="events/"
-            class="inline-block rounded-full bg-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-opacity-70"
+            class="rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-medium text-background hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100"
             >See events</a
           >
           <a
+            data-wip
             href="about/"
-            class="inline-block rounded-full border border-accent px-5 py-2 font-bold sm:mt-10 md:hover:bg-accent md:hover:bg-opacity-70"
-            >About Regalia</a
+            class="border-red rounded-lg border px-5 py-2.5 text-center text-sm font-medium text-background hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100"
           >
+            About Regalia
+          </a>
         </div>
 
         <div class="absolute bottom-16 sm:right-12">
@@ -331,97 +336,76 @@
     <!-- ARTISTS -->
     <section
       data-artist
-      data-wip
       id="artist"
-      class="min-h-screen w-full scroll-mt-20 px-6 md:px-12"
+      class="mb-12 min-h-screen w-full scroll-mt-20 px-6 md:px-12"
     >
-      <h1 class="text-title font-black">Artists</h1>
-
-      <!-- CARD -->
+      <h1 class="mb-6 text-title font-black">Artists</h1>
 
       <div
-        class="max-w-sm rounded-lg border border-gray-200 bg-gray-700 shadow-md"
+        class="w-full flex flex-wrap items-center justify-center gap-6 space-y-6"
       >
-        <div class="flex justify-end px-4 pt-4">
-          <button
-            id="dropdownButton"
-            data-dropdown-toggle="dropdown"
-            class="hidden rounded-lg p-1.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 sm:inline-block"
-            type="button"
-          >
-            <svg
-              class="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-              ></path>
-            </svg>
-          </button>
-
+        <!-- 19 may -->
+        <div class="flex flex-col items-center">
+          <span class="mb-6 text-3xl font-bold text-text">19 May</span>
           <div
-            id="dropdown"
-            class="z-10 hidden w-44 list-none divide-y divide-gray-100 rounded bg-white text-base shadow"
-            style="
-              position: absolute;
-              inset: auto auto 0px 0px;
-              margin: 0px;
-              transform: translate(614px, 3321px);
-            "
-            data-popper-reference-hidden=""
-            data-popper-escaped=""
-            data-popper-placement="top"
+            class="flex flex-wrap items-center justify-center gap-6 md:justify-between"
           >
-            <ul class="py-1" aria-labelledby="dropdownButton">
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
-                  >Edit</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
-                  >Export Data</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 text-sm text-red-600 hover:bg-gray-100"
-                  >Delete</a
-                >
-              </li>
-            </ul>
+            <div class="max-w-xs flex-shrink-0 rounded-lg shadow-lg border-dark border-2">
+              <img class="block rounded-lg mb-8 p-0 object-cover object-center" src="https://ik.imagekit.io/rain/regalia22/artists/underauthority_P28p5o7_F?ik-sdk-version=javascript-1.4.3" alt="Ehsaas India image" />
+              <div class="px-5 pb-5">
+                <h5 class="font-medium text-xl tracking-tight text-text text-center">
+                  Ehsaas India
+                </h5>
+              </div>
+            </div>
+            <div class="max-w-xs flex-shrink-0 rounded-lg shadow-lg border-dark border-2">
+              <img
+                class="block rounded-lg mb-8 p-0 object-cover object-center"
+                src="https://ik.imagekit.io/rain/regalia22/artists/somlata_G9cqHnZpb?ik-sdk-version=javascript-1.4.3"
+                alt="Somlata and the Aces image"
+              />
+              <div class="px-5 pb-5">
+                <h5 class="font-medium text-xl tracking-tight text-text text-center">
+                  Somlata and the Aces
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col items-center pb-10">
-          <img
-            class="mb-3 h-24 w-24 rounded-full shadow-lg"
-            src="/docs/images/people/profile-picture-3.jpg"
-            alt="Bonnie image"
-          />
-          <h5 class="mb-1 text-xl font-medium text-gray-900">
-            Bonnie Green
-          </h5>
-          <span class="text-sm text-gray-500"
-            >Visual Designer</span
+        <!-- 20 may -->
+        <div class="flex flex-col items-center">
+          <span class="mb-6 text-3xl font-bold text-text">20 May</span>
+          <div
+            class="flex flex-wrap items-end justify-center gap-6 md:justify-between"
           >
-          <div class="mt-4 flex space-x-3 lg:mt-6">
-            <a
-              href="#"
-              class="inline-flex items-center rounded-lg bg-blue-700 py-2 px-4 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
-              >Add friend</a
-            >
-            <a
-              href="#"
-              class="inline-flex items-center rounded-lg border border-gray-300 bg-white py-2 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200"
-              >Message</a
-            >
+            <div class="max-w-xs flex-shrink-0 rounded-lg shadow-lg border-dark border-2">
+              <img
+                class="block rounded-lg mb-8 p-0 object-cover object-center"
+                src="https://ik.imagekit.io/rain/regalia22/artists/underauthority_P28p5o7_F?ik-sdk-version=javascript-1.4.3"
+                alt="Tribute to Pancham image"
+              />
+              <div class="px-5 pb-5">
+                <h5 class="font-medium mb-1 text-xl tracking-tight text-text text-center">
+                  Tribute to Pancham
+                </h5>
+                <p class="text-sm text-[#444] text-center">
+                  Kishore Sodha, Sachin Jambhekar, <br />
+                  Sujoy Bhowmik, Sispiya and team
+                </p>
+              </div>
+            </div>
+            <div class="max-w-xs flex-shrink-0 rounded-lg shadow-lg border-dark border-2">
+              <img
+                class="block rounded-lg mb-8 p-0 object-cover object-center"
+                src="https://ik.imagekit.io/rain/regalia22/artists/underauthority_P28p5o7_F?ik-sdk-version=javascript-1.4.3"
+                alt="Underground Authority image"
+              />
+              <div class="px-5 pb-5">
+                <h5 class="font-medium text-xl tracking-tight text-text text-center">
+                  Underground Authority
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -444,121 +428,121 @@
           <ul data-carousel class="splide__list w-full will-change-transform">
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/1.jpg"
+                src="images/carousel/1.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/2.jpg"
+                src="images/carousel/2.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/3.jpg"
+                src="images/carousel/3.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/4.jpg"
+                src="images/carousel/4.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/5.jpg"
+                src="images/carousel/5.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/6.jpg"
+                src="images/carousel/6.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/7.jpg"
+                src="images/carousel/7.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/8.jpg"
+                src="images/carousel/8.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/9.jpg"
+                src="images/carousel/9.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/10.jpg"
+                src="images/carousel/10.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/11.jpg"
+                src="images/carousel/11.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/12.jpg"
+                src="images/carousel/12.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/13.jpg"
+                src="images/carousel/13.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/14.jpg"
+                src="images/carousel/14.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/15.jpg"
+                src="./images/carousel/15.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/16.jpg"
+                src="images/carousel/16.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/17.jpg"
+                src="images/carousel/17.jpg"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/18.jpg"
+                src="images/carousel/18.jpg"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/19.jpg"
+                src="images/carousel/19.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                data-splide-lazy="./images/carousel/20.jpg"
+                src="images/carousel/20.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
@@ -692,6 +676,119 @@
         </svg>
       </div>
     </div>
+
+    <!-- <script type="module"> -->
+    <!--   import {html, render} from 'https://unpkg.com/lit-html?module'; -->
+    <!---->
+    <!--   const navbar = () => html` -->
+    <!--       <nav -->
+    <!--       data-navbar -->
+    <!--       class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents" -->
+    <!--     > -->
+    <!--       <div -->
+    <!--         class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 md:px-10" -->
+    <!--       > -->
+    <!--         <a href="https://www.rcciit.org/" class="flex items-center"> -->
+    <!--           <img -->
+    <!--             src="images/logo_rcciit.png" -->
+    <!--             class="mr-3 h-9 w-5" -->
+    <!--             alt="RCCIIT Logo" -->
+    <!--           /> -->
+    <!--           <p class="self-center whitespace-nowrap text-mini font-bold"> -->
+    <!--             RCC Institute of Information Technology -->
+    <!--             <span class="mt-1 block text-micro font-medium sm:text-mini"> -->
+    <!--               Canal South Road. Beliaghata. Kolkata - 700 015 -->
+    <!--             </span> -->
+    <!--           </p> -->
+    <!--         </a> -->
+    <!--         <button -->
+    <!--           data-collapse-toggle="mobile-menu" -->
+    <!--           type="button" -->
+    <!--           class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" -->
+    <!--           aria-controls="mobile-menu" -->
+    <!--           aria-expanded="false" -->
+    <!--         > -->
+    <!--           <span class="sr-only">Open menu</span> -->
+    <!--           <svg -->
+    <!--             class="h-6 w-6" -->
+    <!--             fill="currentColor" -->
+    <!--             viewBox="0 0 20 20" -->
+    <!--             xmlns="http://www.w3.org/2000/svg" -->
+    <!--           > -->
+    <!--             <path -->
+    <!--               fill-rule="evenodd" -->
+    <!--               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" -->
+    <!--               clip-rule="evenodd" -->
+    <!--             ></path> -->
+    <!--           </svg> -->
+    <!--           <svg -->
+    <!--             class="hidden h-6 w-6" -->
+    <!--             fill="currentColor" -->
+    <!--             viewBox="0 0 20 20" -->
+    <!--             xmlns="http://www.w3.org/2000/svg" -->
+    <!--           > -->
+    <!--             <path -->
+    <!--               fill-rule="evenodd" -->
+    <!--               d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" -->
+    <!--               clip-rule="evenodd" -->
+    <!--             ></path> -->
+    <!--           </svg> -->
+    <!--         </button> -->
+    <!--         <div class="hidden w-full md:block md:w-auto" id="mobile-menu"> -->
+    <!--           <ul -->
+    <!--             class="mt-4 flex flex-col overflow-hidden rounded-lg bg-background md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-sm md:font-bold" -->
+    <!--           > -->
+    <!--             <li> -->
+    <!--               <a -->
+    <!--                 href="#home" -->
+    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 >Home</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--             <li> -->
+    <!--               <a -->
+    <!--                 href="#artist" -->
+    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 aria-current="Artist" -->
+    <!--                 >Artist</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--             <li> -->
+    <!--               <a -->
+    <!--                 href="events/" -->
+    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 >Events</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--             <li data-wip> -->
+    <!--               <a -->
+    <!--                 href="about/" -->
+    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 >About</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--             <li> -->
+    <!--               <a -->
+    <!--                 href="#gallery" -->
+    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 >Gallery</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--             <li> -->
+    <!--               <a -->
+    <!--                 href="#contact" -->
+    <!--                 class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
+    <!--                 aria-current="Contact" -->
+    <!--                 >Contact</a -->
+    <!--               > -->
+    <!--             </li> -->
+    <!--           </ul> -->
+    <!--         </div> -->
+    <!--       </div> -->
+    <!--     </nav> -->
+    <!--   ` -->
+    <!--   render(navbar(), document.body); -->
+    <!-- </script> -->
 
     <!-- (do not edit below) -->
     <script type="module" src="/main.js"></script>

@@ -31,8 +31,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: dist
-          path: dist
+          name: deploy
+          path: deploy
 
   deploy-build:
     needs: build
@@ -53,8 +53,8 @@ jobs:
       - name: Download website build
         uses: actions/download-artifact@v1
         with:
-          name: dist
-          path: dist
+          name: deploy
+          path: docs
 
       - name: Commit and Push
         run: |
@@ -63,4 +63,3 @@ jobs:
             git commit -m "gh-actions deployed a new build"
             git push --force https://github.com/${GITHUB_REPOSITORY}.git HEAD:deploy
           fi
-          

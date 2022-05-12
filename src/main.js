@@ -6,15 +6,30 @@ import Splide from '@splidejs/splide'
 
 import '@splidejs/splide/css'
 
+import {render} from 'https://unpkg.com/lit-html?module';
+
+import {navbar} from './lib/navbar.js'
+
 import { el, elall, log } from './util.js'
 
-const nav = el('nav[data-navbar]')
+const modules = import.meta.glob('./images/carousel/*.jpg')
+const gallery = []
+
+let bg='bg-transparent'
 
 onscroll = () => {
-  // add background on scroll
-  scrollY > 10
-    ? nav.classList.add('bg-background')
-    : nav.classList.remove('bg-background')
+  scrollY > 10 ? bg='bg-background' : bg='bg-transparent'
+
+  render(navbar('./images/logo_rcciit.png', bg), document.body);
+}
+
+render(navbar('./images/logo_rcciit.png'), document.body);
+
+for (const path in modules) {
+  modules[path]().then(() => {
+    const p = new URL(path, import.meta.url)
+    gallery.push(p)
+  })
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -66,4 +81,4 @@ el('.preloader-page').addEventListener('click', svgAnimation)
 
 // Hide "artist" section and link
 // remove the line when completed
-// elall('[data-wip]').forEach(el => el.classList.add('hidden'))
+elall('[data-wip]').forEach(el => el.classList.add('hidden'))

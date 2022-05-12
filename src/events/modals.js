@@ -1,38 +1,55 @@
+import './events.css'
+// import '../tailwind.css'
+
+// import {render} from 'https://unpkg.com/lit-html?module';
+
+// import {navbar} from '../lib/navbar.js'
+
+// render(navbar('../images/logo_rcciit.png'), document.body);
+
+const modules = import.meta.glob('./images/*.webp')
+const gallery = []
+
+for (const path in modules) {
+  modules[path]().then(() => {
+    const p = new URL(path, import.meta.url)
+    gallery.push(p)
+  })
+}
+
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
 openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
 })
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelector('.modal.active')
-    modals.forEach( modal =>{
-        closeModal(modal)
-    })
+  const modals = document.querySelector('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
 })
 
 closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-    })
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
 })
 
-function openModal(modal)
-{
-    if(modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
 
-function closeModal(modal)
-{
-    if(modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }
