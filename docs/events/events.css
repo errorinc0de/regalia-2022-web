@@ -233,7 +233,7 @@ a {
   color: rgba(134, 248, 248, 0.788);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
   div.headtext {
     display: flex;
