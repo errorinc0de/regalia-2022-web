@@ -1,19 +1,15 @@
-import {html} from 'https://unpkg.com/lit-html?module';
+import { html } from 'https://unpkg.com/lit-html?module'
 
-export const navbar = (logoURL, bg='bg-transparent') => html`
-    <nav
+export const navbar = (logoURL, bg = 'bg-transparent') => html`
+  <nav
     data-navbar
-    class="fixed top-0 z-40 w-full ${bg} transition-colors duration-200 ease-linear will-change-contents"
+    class="${bg} fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents"
   >
     <div
-      class="container mx-auto flex flex-wrap items-center text-text justify-between py-4 px-6 md:px-10"
+      class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 text-text md:px-10"
     >
       <a href="https://www.rcciit.org/" class="flex items-center">
-        <img
-          src="${logoURL}"
-          class="mr-3 h-9 w-5"
-          alt="RCCIIT Logo"
-        />
+        <img src="${logoURL}" class="mr-3 h-9 w-5" alt="RCCIIT Logo" />
         <p class="self-center whitespace-nowrap text-mini font-bold">
           RCC Institute of Information Technology
           <span class="mt-1 block text-micro font-medium sm:text-mini">

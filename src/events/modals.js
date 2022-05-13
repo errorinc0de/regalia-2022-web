@@ -1,21 +1,25 @@
 import './events.css'
 // import '../tailwind.css'
-
+//
 // import {render} from 'https://unpkg.com/lit-html?module';
-
 // import {navbar} from '../lib/navbar.js'
+//
+// import logo from '../images/logo_rcciit.png'
+//
+// let bg = 'bg-transparent'
+//
+// onscroll = () => {
+//   scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
+//
+//   render(navbar(logo, bg), document.body)
+// }
+//
+// render(navbar(logo), document.body)
+//
 
-// render(navbar('../images/logo_rcciit.png'), document.body);
+import bg from './images/bg.webp'
 
-const modules = import.meta.glob('./images/*.webp')
-const gallery = []
-
-for (const path in modules) {
-  modules[path]().then(() => {
-    const p = new URL(path, import.meta.url)
-    gallery.push(p)
-  })
-}
+document.querySelector('img#bg').src = bg
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')

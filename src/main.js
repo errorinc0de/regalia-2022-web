@@ -6,24 +6,28 @@ import Splide from '@splidejs/splide'
 
 import '@splidejs/splide/css'
 
-import {render} from 'https://unpkg.com/lit-html?module';
+import { render } from 'https://unpkg.com/lit-html?module'
 
-import {navbar} from './lib/navbar.js'
+import { navbar } from './lib/navbar.js'
 
 import { el, elall, log } from './util.js'
+
+import logo from './images/logo_rcciit.png'
 
 const modules = import.meta.glob('./images/carousel/*.jpg')
 const gallery = []
 
-let bg='bg-transparent'
+// swarasati PNB
+
+let bg = 'bg-transparent'
 
 onscroll = () => {
-  scrollY > 10 ? bg='bg-background' : bg='bg-transparent'
+  scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
 
-  render(navbar('./images/logo_rcciit.png', bg), document.body);
+  render(navbar(logo, bg), document.body)
 }
 
-render(navbar('./images/logo_rcciit.png'), document.body);
+render(navbar(logo), document.body)
 
 for (const path in modules) {
   modules[path]().then(() => {
