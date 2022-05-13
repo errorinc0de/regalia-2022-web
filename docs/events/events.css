@@ -1,14 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Montserrat:wght@600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Montserrat:wght@400;500;800&display=swap');
-
-#bg {
-  position: fixed;
+.gradient-wrap {
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  min-width: 100%;
-  min-height: 1024px;
+  height:100%;
+  position: fixed;
+}
+.meshgradient>.color {
+  width: 100%;
+  height:100%;
+  position: absolute;
+    display: flex;
+  align-items: center;
+  transform: scale(3) rotate(0deg);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  background-repeat: no-repeat;
+  mix-blend-mode: overlay;
+}
+
+.c1 {
+  background: radial-gradient(#f0da5d 25%, transparent 50%);
+  background-size: 60% 80%;
+   background-position: 0 0;
+  animation: c1 8s infinite linear;
+}
+.c2 {
+  background:  radial-gradient(#4f8c83 25%, transparent 50%);
+  background-size: 70% 80%;
+   background-position: 0 100%;
+  animation: c2 10s infinite linear;
+}
+
+.c3 {
+  background:   radial-gradient(#4f8c83 25%, transparent 50%);
+    background-size: 80% 80%;
+   background-position: 50% 0;
+    animation: c3 5s infinite linear;
+}
+.c4 {
+  background:    radial-gradient(#efbdc8 25%, transparent 50%);
+  background-size: 80% 80%;
+   background-position: 50% 100%;
+   animation: c4 6s infinite linear;
+}
+@keyframes c1 {
+  50%{ 
+  background-size: 80% 80%;
+   background-position: 50% 100%;
+    transform: scale(3) rotate(-75deg);
+  }
+}
+
+@keyframes c2 {
+  50%{ 
+    background-size: 80% 80%;
+   background-position: 50% 0;
+    transform: scale(3) rotate(90deg);
+  }
+}
+@keyframes c3 {
+  50%{ 
+  background-size: 70% 80%;
+   background-position: 0 100%;
+   transform: scale(3) rotate(8deg);
+  }
+}
+
+@keyframes c4 {
+  50%{ 
+   background-position: 0 0;
+  animation: c1 10s infinite;
+    transform: scale(3) rotate(-36deg);
+  }
 }
 
 .headtext {
@@ -19,19 +88,13 @@
   height: 77px;
   left: 7%;
   top: 7%;
+
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 900;
   font-size: 10em;
   line-height: 80%;
   color: #ffff;
-}
-
-.headtext #go-back{
-  position: absolute;
-  cursor: pointer;
-  font-size: 3rem;
-  margin: 10px 10px 30px 1500px;
 }
 
 .card-collection {
@@ -111,7 +174,7 @@ button {
   color: white;
   font-family: 'Montserrat', sans-serif;
   border: none;
-  font-size: 12px;
+  font-size: 15px;
   padding: 10px 20px;
   position: fixed;
   bottom: 10%;
@@ -175,6 +238,7 @@ button:hover {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
+  word-break: break-all;
 }
 
 #overlay {
@@ -218,7 +282,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal::-webkit-scrollbar-thumb {
-  height: 2%;
+  height: 20%;
   background-color: rgba(239, 239, 247, 0.863); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   /* creates padding around scroll thumb */
@@ -234,20 +298,16 @@ a {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+ /* BACK BUTTON */
+  a[href="/"] {
+    font-size: 0.625rem !important;
+  }
 
   div.headtext {
     display: flex;
     justify-content: flex-start;
-    font-size: 3.5em;
+    font-size: 3em;
   }
-
-  .headtext #go-back{
-    position: absolute;
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin: 4px 10px 30px 250px;
-  }
-
   .divider{
     transform: scale(0);
   }
@@ -264,12 +324,8 @@ a {
     margin-top: 8rem;
   }
 
-  .card-image{
-    height: 8%;
-  }
-
   .name {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .modal {
@@ -290,9 +346,11 @@ a {
     font-weight: 100;
     top: 3%;
     left: 80%;
-    bottom: 80%;
+    bottom: 90%;
   }
-  
+  #card-image {
+    height: 50%;
+  }
   .name {
     top: 50%;
   }

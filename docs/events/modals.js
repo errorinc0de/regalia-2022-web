@@ -36,7 +36,3 @@ function closeModal(modal)
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
-
-document.getElementById('go-back').addEventListener('click', () => {
-    history.back();
-  });
