@@ -99,7 +99,8 @@ const svgAnimation = () => {
   })
 }
 
-el('.preloader-page').addEventListener('click', svgAnimation)
+el('.preloader-page') &&
+  el('.preloader-page').addEventListener('click', svgAnimation)
 
 // Hide "artist" section and link
 // remove the line when completed

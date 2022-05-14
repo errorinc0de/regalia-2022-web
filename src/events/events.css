@@ -81,7 +81,7 @@ body {
   opacity: 0.3;
   top: 400px;
 }
-button {
+.modal-btn {
   background-color: #394e5a !important;
   color: white !important;
   font-family: 'Montserrat', sans-serif !important;
@@ -116,6 +116,7 @@ button:hover {
   max-height: 80vh;
   overflow: scroll;
   margin-top: 30px;
+  
 }
 
 .modal.active {
@@ -138,7 +139,7 @@ button:hover {
   align-items: center;
 }
 
-.modal-header .close-button {
+ .close-button {
   cursor: pointer;
   font-size: 30px !important;
   line-height: 0px !important;
@@ -146,9 +147,10 @@ button:hover {
   top: 2%;
   left: 90%;
   bottom: 90%;
-
-  height: 50px;
-  width: 50px;
+  background-color: #394e5a;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 100% !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +224,7 @@ a {
   .modal-body {
     font-size: 1rem;
   }
-  .modal-header .close-button {
+  .close-button {
     font-size: 1.5rem;
     font-weight: 100;
     top: 3%;
@@ -249,4 +251,21 @@ a {
   opacity: 0.3;
   font-size: 80px !important;
   font-weight: bold !important;
+}
+
+@media all and (max-width: 480px) {
+  .modal-body
+  {
+    font-size: 10px !important;
+  }
+  .modal-header
+  {
+    padding: 23px 16px 19px 29px !important;
+  }
+  .close-button 
+  {
+    width: 60px !important;
+    height: 35px !important;
+  }
+
 }
