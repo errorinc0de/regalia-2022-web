@@ -10,16 +10,8 @@
 
 ### Build for production
 
-When you're ready for production. Go to the root of the project folder and use the commands as follows
+When you're ready for production. Go to the root of the project folder and run `npm run build`
 
-```bash
-npm run format src
-npm run tw-build
-```
-
-- Now open _src/main.js_ and replace tailwind.css import with build.css
-
-- Finally run `npm run build`
 - Publish the _deploy_ folder to your host provider
 
-To preview the production build run `npm run preview`
+To preview the production run `npm run serve`
