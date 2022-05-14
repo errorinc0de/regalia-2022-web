@@ -61,9 +61,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // preloader animation
 const LANDING = {}
 LANDING.intro = document.querySelector('.preloader-page')
-LANDING.path = LANDING.intro.querySelector('path')
+// LANDING.path = LANDING.intro.querySelector('path')
+
+jQuery(window).load(function () {
+  if (sessionStorage.getItem('dontLoad') == null) {
+    sessionStorage.setItem('dontLoad', true)
+
+    el('body').classList.add('overflow-hidden')
+    $('.preloader-page').css('display', 'block')
+
+    setTimeout(() => {
+      svgAnimation()
+    }, 3000)
+  } else {
+    el('body').classList.remove('overflow-hidden')
+    $('.preloader-page').css('display', 'none')
+    $('.main-body').css('display', 'block')
+  }
+})
 
 const svgAnimation = () => {
+  $('.main-body').css('display', 'block')
   el('body').classList.remove('overflow-hidden')
 
   anime({
