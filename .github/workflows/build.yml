@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      -code-fix
+      - code-fix
 
 jobs:
   build:
