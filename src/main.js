@@ -1,4 +1,4 @@
-import './tailwind.css'
+import './build.css'
 
 import 'flowbite'
 
@@ -65,14 +65,14 @@ LANDING.intro = document.querySelector('.preloader-page')
 
 jQuery(window).load(function () {
   if (sessionStorage.getItem('dontLoad') == null) {
-    // sessionStorage.setItem('dontLoad', true)
+    sessionStorage.setItem('dontLoad', true)
 
     el('body').classList.add('overflow-hidden')
     $('.preloader-page').css('display', 'block')
 
-    // setTimeout(() => {
-    //   svgAnimation()
-    // }, 3000)
+    setTimeout(() => {
+      svgAnimation()
+    }, 3000)
   } else {
     el('body').classList.remove('overflow-hidden')
     $('.preloader-page').css('display', 'none')

@@ -64,7 +64,6 @@
   color: #ffffff;
 }
 
-
 .contact-email-section a {
   text-decoration: none;
   font-style: normal;
@@ -120,14 +119,10 @@
   line-height: 43px;
   letter-spacing: 0.03em;
   font-weight: bold;
-  color: #0D0D0D;
-  text-shadow:
-      -1px -1px 0 #0b74bf,
-      1px -1px 0 #0b74bf,
-      -1px 1px 0 #0b74bf,
-      1px 1px 0 #0b74bf;  
+  color: #0d0d0d;
+  text-shadow: -1px -1px 0 #0b74bf, 1px -1px 0 #0b74bf, -1px 1px 0 #0b74bf,
+    1px 1px 0 #0b74bf;
 }
-
 
 .platforms {
   width: 100%;
