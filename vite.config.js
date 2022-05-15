@@ -13,12 +13,9 @@ module.exports = defineConfig({
         about: resolve(__dirname, 'src', 'about/index.html'),
         events: resolve(__dirname, 'src', 'events/index.html'),
       },
-      // 			external: [
-      // 				'events.css',
-      // 				'modals.js',
-      // 				'*.jpg',
-      // 				'*.webp'
-      // 			]
+      external: [
+      	'humans.txt'
+      ]
     },
   },
 })

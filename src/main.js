@@ -12,6 +12,8 @@ import Splide from '@splidejs/splide'
 
 import { el, elall, log } from './util.js'
 
+import humans from '../humans.txt'
+
 // TODO: add text animations
 // Splitting()
 
