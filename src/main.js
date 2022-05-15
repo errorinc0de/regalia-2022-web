@@ -2,7 +2,7 @@
 // remove the line when completed
 elall('[data-wip]').forEach(el => el.classList.add('hidden'))
 
-import './tailwind.css'
+import './build.css'
 
 import '@splidejs/splide/css'
 
