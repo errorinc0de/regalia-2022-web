@@ -56,14 +56,14 @@ export const navbar = (logoURL, bg = 'bg-transparent') => html`
         >
           <li>
             <a
-              href="#home"
+              href="/#home"
               class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="#artist"
+              href="/#artist"
               class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
               aria-current="Artist"
               >Artist</a
@@ -71,28 +71,22 @@ export const navbar = (logoURL, bg = 'bg-transparent') => html`
           </li>
           <li>
             <a
-              href="events/"
+              href="/events/"
               class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
               >Events</a
             >
           </li>
-          <li data-wip>
-            <a
-              href="about/"
-              class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
-              >About</a
-            >
-          </li>
+
           <li>
             <a
-              href="#gallery"
+              href="/#gallery"
               class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
               >Gallery</a
             >
           </li>
           <li>
             <a
-              href="#contact"
+              href="/#contact"
               class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
               aria-current="Contact"
               >Contact</a

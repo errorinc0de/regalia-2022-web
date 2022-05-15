@@ -1,21 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Montserrat:wght@600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@900&family=Montserrat:wght@400;500;800&display=swap');
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-width: 100%;
-  min-height: 1024px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  background-color: #0d0d0d;
 }
 
 .headtext {
   position: fixed;
   width: 250px;
   height: 77px;
-  left: 7%;
-  top: 7%;
+  left: 110px;
+  top: 100px;
 
   font-family: 'Montserrat';
   font-style: normal;
@@ -44,8 +37,8 @@
 }
 
 .card {
-  height: 600px;
-  width: 600px;
+  min-height: 200px;
+  width: 45%;
   background-color: white;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -58,17 +51,10 @@
   left: 0;
   right: 0;
   border-radius: 28px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-img#card-image {
-  border-radius: 28px;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .name {
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
@@ -92,22 +78,21 @@ img#card-image {
   font-size: 14px;
   font-weight: 500;
   padding: 20px 50px;
-  line-height: 15px;
-  text-align: center;
-  position: absolute;
+  line-height: 25px;
+  text-align: left;
+  opacity: 0.3;
   top: 400px;
 }
-button {
-  background-color: #394e5a;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
+.modal-btn {
+  background-color: #394e5a !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
   border: none;
-  font-size: 15px;
-  padding: 10px 20px;
-  position: fixed;
-  bottom: 10%;
+  font-size: 15px !important;
+  padding: 10px 20px !important;
   border-radius: 28px;
   cursor: pointer;
+  margin-bottom: 40px !important;
 }
 
 button:hover {
@@ -119,6 +104,8 @@ button:hover {
   position: fixed;
   top: 50%;
   left: 50%;
+  opacity: 0;
+  display: none;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   border-radius: 40px;
@@ -129,10 +116,16 @@ button:hover {
   width: 1700px;
   height: 900px;
   max-width: 80%;
+  max-height: 80vh;
+  overflow: scroll;
+  margin-top: 30px;
+  
 }
 
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  display: block;
 }
 
 .modal-header {
@@ -150,22 +143,31 @@ button:hover {
   align-items: center;
 }
 
-.modal-header .close-button {
+ .close-button {
   cursor: pointer;
-  font-size: 3.25rem;
+  font-size: 30px !important;
+  line-height: 0px !important;
   font-weight: 100;
   top: 2%;
   left: 90%;
   bottom: 90%;
+  background-color: #394e5a;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-body {
   padding: 8px 30px 30px 30px;
-  font-size: 20px;
+  font-size: 14px;
   color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
+  line-height: 30px !important;
 }
 
 #overlay {
@@ -180,41 +182,6 @@ button:hover {
   pointer-events: none;
 }
 
-body::-webkit-scrollbar {
-  width: 12px;
-  margin: auto;
-}
-
-body::-webkit-scrollbar-track {
-  height: 80%;
-  background: rgba(128, 143, 163, 0.562); /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  height: 20%;
-  background-color: rgb(0, 0, 0); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 2px solid whitesmoke;
-}
-
-.modal::-webkit-scrollbar {
-  height: 15%;
-  width: 10px;
-  margin: auto;
-}
-
-.modal::-webkit-scrollbar-track {
-  height: 80%;
-  background: 0; /* color of the tracking area */
-}
-
-.modal::-webkit-scrollbar-thumb {
-  height: 20%;
-  background-color: rgba(239, 239, 247, 0.863); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  /* creates padding around scroll thumb */
-}
-
 #overlay.active {
   pointer-events: all;
   opacity: 1;
@@ -225,8 +192,8 @@ a {
 }
 
 @media screen and (max-width: 768px) {
- /* BACK BUTTON */
-  a[href="/"] {
+  /* BACK BUTTON */
+  a[href='/'] {
     font-size: 0.625rem !important;
   }
 
@@ -236,9 +203,6 @@ a {
     font-size: 3em;
   }
 
-  .bio {
-    transform: scale(0);
-  }
   .card {
     margin: 1em;
     height: 100%;
@@ -264,7 +228,7 @@ a {
   .modal-body {
     font-size: 1rem;
   }
-  .modal-header .close-button {
+  .close-button {
     font-size: 1.5rem;
     font-weight: 100;
     top: 3%;
@@ -277,10 +241,27 @@ a {
   .name {
     top: 50%;
   }
-  .bio {
-    top: 62%;
-  }
+
   .special-image {
     height: 10%;
   }
+}
+
+
+
+@media all and (max-width: 480px) {
+  .modal-body
+  {
+    font-size: 10px !important;
+  }
+  .modal-header
+  {
+    padding: 23px 16px 19px 29px !important;
+  }
+  .close-button 
+  {
+    width: 60px !important;
+    height: 35px !important;
+  }
+
 }
