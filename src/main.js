@@ -1,29 +1,35 @@
+// Hide "artist" section and link
+// remove the line when completed
+elall('[data-wip]').forEach(el => el.classList.add('hidden'))
+
 import './tailwind.css'
+
+import '@splidejs/splide/css'
+
+import 'splitting/dist/splitting.css'
+import 'splitting/dist/splitting-cells.css'
 
 import 'flowbite'
 
 import Splide from '@splidejs/splide'
 
-import '@splidejs/splide/css'
+import Splitting from 'splitting'
 
 import { el, elall, log } from './util.js'
 
-const modules = import.meta.glob('./images/carousel/*.jpg')
-const gallery = []
-
-// swarasati PNB
+// TODO: add text animations
+// Splitting()
 
 onscroll = () =>
-  scrollY > 10 ? el('nav').classList.add('bg-background') : el('nav').classList.remove('bg-background') 
+  scrollY > 10
+    ? el('nav').classList.add('bg-background')
+    : el('nav').classList.remove('bg-background')
 
-for (const path in modules) {
-  modules[path]().then(() => {
-    const p = new URL(path, import.meta.url)
-    gallery.push(p.href)
-  })
-}
+onload = () => {
+  el('.preloader-page').classList.remove('cursor-default')
+  el('.loader__text > p').textContent = 'Click to begin'
+  el('.preloader-page').addEventListener('click', svgAnimation)
 
-document.addEventListener('DOMContentLoaded', function () {
   new Splide('.splide', {
     perPage: 2,
     type: 'loop',
@@ -43,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
   }).mount()
-})
+}
 
 // preloader animation
 const LANDING = {}
@@ -67,9 +73,3 @@ const svgAnimation = () => {
     d: LANDING.path.getAttribute('pathdata:id'),
   })
 }
-
-el('.preloader-page').addEventListener('click', svgAnimation)
-
-// Hide "artist" section and link
-// remove the line when completed
-elall('[data-wip]').forEach(el => el.classList.add('hidden'))
