@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.0.1",
-    "flowbite": "^1.4.5"
+    "flowbite": "^1.4.5",
+    "splitting": "^1.0.6"
   }
 }

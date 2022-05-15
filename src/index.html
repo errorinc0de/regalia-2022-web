@@ -153,6 +153,115 @@
     />
     <div class="absolute inset-0 z-[1] h-screen bg-background opacity-40"></div>
 
+    <!-- NAV -->
+    <nav
+      data-nav
+      class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents"
+    >
+      <div
+        class="flex flex-wrap items-center justify-between py-4 px-6 text-text md:px-12"
+      >
+        <a href="https://www.rcciit.org/" class="flex items-center">
+          <img
+            src="./images/logo_rcciit.png"
+            class="mr-3 h-9 w-5"
+            alt="RCCIIT Logo"
+          />
+          <p
+            class="self-center whitespace-nowrap text-min-xs font-bold md:text-max-sm"
+          >
+            RCC Institute of Information Technology
+            <span class="mt-1 block text-min-us font-medium sm:text-max-xs">
+              Canal South Road. Beliaghata. Kolkata - 700 015
+            </span>
+          </p>
+        </a>
+        <button
+          data-collapse-toggle="mobile-menu"
+          type="button"
+          class="ml-3 inline-flex items-center rounded-lg p-2 text-min-base text-text active:outline-none active:ring-2 active:ring-accent md:hidden md:text-min-base md:hover:bg-accent"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="hidden h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+          <ul
+            class="md:text-sm mt-4 flex flex-col overflow-hidden rounded-lg bg-background text-min-base md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-min-base md:font-medium"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#artist"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Artist"
+                >Artist</a
+              >
+            </li>
+            <li>
+              <a
+                href="events/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Events</a
+              >
+            </li>
+            <li data-wip>
+              <a
+                href="about/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- HOME -->
     <section
       data-home
@@ -160,15 +269,21 @@
       class="relative z-[2] min-h-screen w-full pt-24"
     >
       <div class="z-10 px-6 md:px-12">
-        <div class="mt-6 space-y-2 sm:mt-8">
-          <p class="font-medium">Presenting the annual cultural fest</p>
-          <h1 class="text-5xl font-bold sm:text-title sm:font-black">
+        <div class="mt-6">
+          <p data-sub-title class="text-min-base font-medium md:text-max-base">
+            Presenting the annual cultural fest
+          </p>
+          <h1
+            data-splitting
+            class="overflow-hidden text-min-xl font-black md:text-max-xl"
+          >
             Regalia '22
           </h1>
         </div>
 
         <div
-          class="mt-6 text-2xl font-bold sm:mt-12 sm:space-y-4 sm:text-sub-title"
+          data-text
+          class="mt-4 overflow-hidden text-min-lg font-bold md:text-max-lg"
         >
           <h3>Relive.</h3>
           <h3>Rejoice.</h3>
@@ -176,23 +291,26 @@
         </div>
 
         <!-- links as button -->
-        <div class="mt-6 flex items-center space-x-6 text-sm sm:text-base">
+        <div
+          class="mt-8 flex items-center space-x-6 text-center text-min-sm font-medium text-background md:mt-12 md:text-max-sm"
+        >
           <a
+            data-btn-event
             href="events/"
-            class="rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 text-center text-sm font-medium text-background hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100"
+            class="rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 md:px-6 md:py-3"
             >See events</a
           >
           <a
             data-wip
             href="about/"
-            class="border-red rounded-lg border px-5 py-2.5 text-center text-sm font-medium text-background hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100"
+            class="border-red rounded-lg border px-5 py-2.5 hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 md:px-6 md:py-3"
           >
             About Regalia
           </a>
         </div>
 
-        <div class="absolute bottom-16 sm:right-12">
-          <div class="h-40 w-40 sm:ml-auto sm:h-48 sm:w-48">
+        <div class="absolute bottom-16 md:right-12">
+          <div data-guitar-image class="h-40 w-40 sm:ml-auto sm:h-48 sm:w-48">
             <img
               class="block h-full w-full"
               src="./images/logo_regalia.png"
@@ -200,10 +318,16 @@
               aria-hidden="true"
             />
           </div>
-          <p class="mt-1 font-light sm:text-right sm:text-sub-title">
+          <p
+            data-guitar-date
+            class="mt-1 text-min-base font-light md:text-right md:text-max-lg"
+          >
             19 to 20 May
           </p>
-          <div class="flex items-center space-x-2 sm:text-sub-title">
+          <div
+            data-guitar-location
+            class="flex items-center space-x-2 text-min-base md:text-max-lg"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 sm:h-8 sm:w-8"
@@ -216,7 +340,9 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <p class="font-bold sm:text-right">Nazrul Mancha</p>
+            <p class="text-min-base font-bold md:text-right md:text-max-lg">
+              Nazrul Mancha
+            </p>
           </div>
         </div>
       </div>
@@ -233,12 +359,14 @@
       id="artist"
       class="mb-12 min-h-screen w-full scroll-mt-20 px-6 md:px-12"
     >
-      <h1 class="mb-6 text-title font-black">Artists</h1>
+      <h1 class="mb-6 text-min-xl font-black md:text-max-xl">Artists</h1>
 
       <div class="flex w-full flex-wrap items-center justify-center gap-12">
         <!-- 19 may -->
         <div class="flex flex-col items-center">
-          <span class="mb-6 text-3xl font-bold text-text">19 May</span>
+          <span class="mb-6 text-min-lg font-bold text-text md:text-max-lg"
+            >19 May</span
+          >
           <div
             class="flex flex-wrap items-center justify-center gap-6 md:justify-between"
           >
@@ -247,12 +375,12 @@
             >
               <img
                 class="mb-8 block rounded-lg object-cover object-center p-0"
-                src="https://ik.imagekit.io/rain/regalia22/artists/underauthority_P28p5o7_F?ik-sdk-version=javascript-1.4.3"
+                src="./images/eshaas.jpg"
                 alt="Ehsaas India image"
               />
               <div class="px-5 pb-5">
                 <h5
-                  class="text-center text-xl font-medium tracking-tight text-text"
+                  class="text-center text-min-base font-medium tracking-tight text-text md:text-max-base"
                 >
                   Ehsaas India
                 </h5>
@@ -263,12 +391,12 @@
             >
               <img
                 class="mb-8 block rounded-lg object-cover object-center p-0"
-                src="https://ik.imagekit.io/rain/regalia22/artists/somlata_G9cqHnZpb?ik-sdk-version=javascript-1.4.3"
+                src="./images/somlata.jpg"
                 alt="Somlata and the Aces image"
               />
               <div class="px-5 pb-5">
                 <h5
-                  class="text-center text-xl font-medium tracking-tight text-text"
+                  class="text-center text-min-base font-medium tracking-tight text-text md:text-max-base"
                 >
                   Somlata and the Aces
                 </h5>
@@ -278,27 +406,27 @@
         </div>
         <!-- 20 may -->
         <div class="flex flex-col items-center">
-          <span class="mb-6 text-3xl font-bold text-text">20 May</span>
+          <span class="mb-6 text-min-lg font-bold text-text md:text-max-lg"
+            >20 May</span
+          >
           <div
             class="flex flex-wrap items-end justify-center gap-6 md:justify-between"
           >
             <div
               class="max-w-xs flex-shrink-0 rounded-lg border-2 border-dark shadow-lg"
             >
-              <div class="mb-7 rounded-lg bg-[#d27a62] py-10">
-                <img
-                  class="bloc object-cover object-center p-0"
-                  src="https://ik.imagekit.io/rain/regalia22/artists/tribute_6mTLsCcbY.jpg?ik-sdk-version=javascript-1.4.3"
-                  alt="Tribute to Pancham image"
-                />
-              </div>
+              <img
+                class="mb-8 block rounded-lg object-cover object-center p-0"
+                src="./images/ttp.jpg"
+                alt="Tribute to Pancham image"
+              />
               <div class="px-5 pb-5">
                 <h5
-                  class="mb-1 text-center text-xl font-medium tracking-tight text-text"
+                  class="mb-1 text-center text-min-base font-medium tracking-tight text-text md:text-max-base"
                 >
                   Tribute to Pancham
                 </h5>
-                <p class="text-center text-sm text-[#444]">
+                <p class="text-center text-min-sm text-[#444] md:text-max-sm">
                   Kishore Sodha, Sachin Jambhekar, <br />
                   Sujoy Bhowmik, Sispiya and team
                 </p>
@@ -314,7 +442,7 @@
               />
               <div class="px-5 pb-5">
                 <h5
-                  class="text-center text-xl font-medium tracking-tight text-text"
+                  class="text-center text-min-base font-medium tracking-tight text-text md:text-max-base"
                 >
                   Underground Authority
                 </h5>
@@ -331,132 +459,137 @@
       id="gallery"
       class="mb-12 w-full scroll-mt-20 space-y-6 px-6 md:px-12"
     >
-      <h1 class="text-5xl font-black md:text-title">Gallery</h1>
-      <p class="mt-6 text-accent">See some of the best photos of Regalia</p>
+      <h1 class="text-min-xl font-black md:text-max-xl">Gallery</h1>
+      <p class="mv-6 mt-2 text-min-base text-accent md:text-max-base">
+        See some of the best photos of Regalia
+      </p>
       <!-- carousel container -->
       <div class="splide">
         <div
           style="scrollbar-width: none"
           class="splide__track h-[calc(100vh/10rem) sm:h-[calc(100vh-15rem)]"
         >
-          <ul data-carousel class="splide__list w-full will-change-transform">
+          <ul
+            data-carousel
+            class="splide__list w-full will-change-transform"
+          >
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/1.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/1_DDMYIpaSq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622984977"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/2.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/2_zP7uVkIl3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985598"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/3.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/3_kVIRYsgl3F.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986476"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/4.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/4_KoRTstjSe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985869"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/5.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/5_b_9YQZ7Tgp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986813"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/6.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/6_jxKp0sy83.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985707"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/7.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/7_osOx0gxHy0.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986117"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/8.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/8_NQ06U-dsU.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986823"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/9.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/9_CLc5htNUUy.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985910"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/10.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/10_alwvgvJMP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622983273"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/11.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/11_rZ5rB_Krev.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985457"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/12.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/12__8I1XOOP0I.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986473"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/13.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/13_6CsqVWrBRh.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622984624"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/14.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/14_ZObsW7_gG8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986953"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="./images/carousel/15.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/15_yz2DVhuq8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622986771"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/16.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/16_hd3Dh2sFu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985555"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/17.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/17_c15mThiUt.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622984603"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/18.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/18_AtjFvq3GyZ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622987217"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/19.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/19_Ou0IbUJVFH.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652622985827"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/20.jpg"
+                data-splide-lazy="https://ik.imagekit.io/rain/regalia22/carousel/20_fu-QmTIO9.jpg?ik-sdk-version=javascript-1.4.3"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
@@ -470,9 +603,9 @@
     <section
       data-contact
       id="contact"
-      class="contact w-full scroll-mt-20 px-6 md:px-8"
+      class="contact w-full scroll-mt-20 px-6 md:px-12"
     >
-      <h1 class="contact-head">Contact</h1>
+      <h1 class="mb-6 text-min-xl font-black md:text-max-xl">Contact</h1>
       <div class="contact-middle-section">
         <div class="google-maps">
           <iframe
@@ -487,18 +620,26 @@
         </div>
         <div class="contact-email-section">
           <div class="email-us">
-            <h3 class="font-bold">Email</h3>
-            <a href="mailto:regalia2k22@gmail.com">regalia2k22@gmail.com</a>
+            <h3 class="text-min-lg font-bold md:text-min-lg">Email</h3>
+            <a
+              class="text-min-base font-medium md:text-max-base"
+              href="mailto:regalia2k22@gmail.com"
+              >regalia2k22@gmail.com</a
+            >
           </div>
           <div class="contact-us">
-            <h3>Coordinators</h3>
+            <h3 class="text-min-lg font-bold md:text-max-lg">Coordinators</h3>
             <div class="contacts font-primary">
               <div class="contacts-item">
-                <h5>Bhaswati Chakraborty</h5>
+                <h5 class="text-min-base md:text-max-base">
+                  Bhaswati Chakraborty
+                </h5>
                 <a href="tel:+916291293545">+91 62912 93545</a>
               </div>
               <div class="contacts-item">
-                <h5>Nivedita Chakraborty</h5>
+                <h5 class="text-min-base md:text-max-base">
+                  Nivedita Chakraborty
+                </h5>
                 <a href="tel:+918583057308">+91 85830 57308</a>
               </div>
               <!-- <div class="contacts-item">
@@ -540,13 +681,21 @@
     <footer
       class="mt-6 w-full rounded-lg p-6 shadow md:flex md:items-center md:justify-between md:px-12"
     >
-      <span class="text-sm text-accent sm:text-center md:text-base"
+      <span class="text-min-sm text-accent sm:text-center md:text-max-sm"
         >© 2022
         <a href="https://regalia_website" class="hover:underline">Regalia™</a>.
         All Rights Reserved.
       </span>
+
+      <main class="mt-3 md:mt-0">
+        <p class="text-min-sm font-medium text-[#444] md:text-max-sm">
+          Made with <span class="text-red-600">&hearts;</span> by Regalia tech
+          team
+        </p>
+      </main>
+
       <ul
-        class="flex flex-wrap items-center pt-3 text-sm text-text sm:mt-0 md:text-base"
+        class="mt-3 flex flex-wrap items-center text-min-sm text-text md:mt-0 md:text-max-sm"
       >
         <li>
           <a href="about/" class="mr-4 hover:underline md:mr-6">About</a>
@@ -564,12 +713,12 @@
     </footer>
 
     <!-- PRELOADER -->
-    <div class="preloader-page">
+    <div class="preloader-page cursor-default">
       <div class="loader__wrapper">
         <div class="preloader-page__loader">
           <div class="loader__text">
             <h3>Regalia 2022</h3>
-            <p>Click to start</p>
+            <p class="mt-2">Loading...</p>
           </div>
           <span class="loader__circle"></span>
           <span class="loader__circle"></span>
@@ -591,120 +740,6 @@
       </div>
     </div>
 
-    <!-- <script type="module"> -->
-    <!--   import {html, render} from 'https://unpkg.com/lit-html?module'; -->
-    <!---->
-    <!--   const navbar = () => html` -->
-    <!--       <nav -->
-    <!--       data-navbar -->
-    <!--       class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents" -->
-    <!--     > -->
-    <!--       <div -->
-    <!--         class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 md:px-10" -->
-    <!--       > -->
-    <!--         <a href="https://www.rcciit.org/" class="flex items-center"> -->
-    <!--           <img -->
-    <!--             src="images/logo_rcciit.png" -->
-    <!--             class="mr-3 h-9 w-5" -->
-    <!--             alt="RCCIIT Logo" -->
-    <!--           /> -->
-    <!--           <p class="self-center whitespace-nowrap text-mini font-bold"> -->
-    <!--             RCC Institute of Information Technology -->
-    <!--             <span class="mt-1 block text-micro font-medium sm:text-mini"> -->
-    <!--               Canal South Road. Beliaghata. Kolkata - 700 015 -->
-    <!--             </span> -->
-    <!--           </p> -->
-    <!--         </a> -->
-    <!--         <button -->
-    <!--           data-collapse-toggle="mobile-menu" -->
-    <!--           type="button" -->
-    <!--           class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" -->
-    <!--           aria-controls="mobile-menu" -->
-    <!--           aria-expanded="false" -->
-    <!--         > -->
-    <!--           <span class="sr-only">Open menu</span> -->
-    <!--           <svg -->
-    <!--             class="h-6 w-6" -->
-    <!--             fill="currentColor" -->
-    <!--             viewBox="0 0 20 20" -->
-    <!--             xmlns="http://www.w3.org/2000/svg" -->
-    <!--           > -->
-    <!--             <path -->
-    <!--               fill-rule="evenodd" -->
-    <!--               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" -->
-    <!--               clip-rule="evenodd" -->
-    <!--             ></path> -->
-    <!--           </svg> -->
-    <!--           <svg -->
-    <!--             class="hidden h-6 w-6" -->
-    <!--             fill="currentColor" -->
-    <!--             viewBox="0 0 20 20" -->
-    <!--             xmlns="http://www.w3.org/2000/svg" -->
-    <!--           > -->
-    <!--             <path -->
-    <!--               fill-rule="evenodd" -->
-    <!--               d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" -->
-    <!--               clip-rule="evenodd" -->
-    <!--             ></path> -->
-    <!--           </svg> -->
-    <!--         </button> -->
-    <!--         <div class="hidden w-full md:block md:w-auto" id="mobile-menu"> -->
-    <!--           <ul -->
-    <!--             class="mt-4 flex flex-col overflow-hidden rounded-lg bg-background md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-sm md:font-bold" -->
-    <!--           > -->
-    <!--             <li> -->
-    <!--               <a -->
-    <!--                 href="#home" -->
-    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 >Home</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--             <li> -->
-    <!--               <a -->
-    <!--                 href="#artist" -->
-    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 aria-current="Artist" -->
-    <!--                 >Artist</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--             <li> -->
-    <!--               <a -->
-    <!--                 href="events/" -->
-    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 >Events</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--             <li data-wip> -->
-    <!--               <a -->
-    <!--                 href="about/" -->
-    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 >About</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--             <li> -->
-    <!--               <a -->
-    <!--                 href="#gallery" -->
-    <!--                 class="block border-b border-text py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 >Gallery</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--             <li> -->
-    <!--               <a -->
-    <!--                 href="#contact" -->
-    <!--                 class="block py-2 pr-4 pl-3 text-text hover:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent" -->
-    <!--                 aria-current="Contact" -->
-    <!--                 >Contact</a -->
-    <!--               > -->
-    <!--             </li> -->
-    <!--           </ul> -->
-    <!--         </div> -->
-    <!--       </div> -->
-    <!--     </nav> -->
-    <!--   ` -->
-    <!--   render(navbar(), document.body); -->
-    <!-- </script> -->
-
-    <!-- (do not edit below) -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

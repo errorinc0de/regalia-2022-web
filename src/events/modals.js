@@ -1,21 +1,4 @@
 import './events.css'
-// import '../tailwind.css'
-//
-// import {render} from 'https://unpkg.com/lit-html?module';
-// import {navbar} from '../lib/navbar.js'
-//
-// import logo from '../images/logo_rcciit.png'
-//
-// let bg = 'bg-transparent'
-//
-// onscroll = () => {
-//   scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
-//
-//   render(navbar(logo, bg), document.body)
-// }
-//
-// render(navbar(logo), document.body)
-//
 
 import bg from './images/bg.webp'
 
