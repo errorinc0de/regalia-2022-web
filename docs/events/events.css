@@ -31,14 +31,14 @@
   animation: c1 8s infinite linear;
 }
 .c2 {
-  background:  radial-gradient(#4f8c83 25%, transparent 50%);
+  background:  radial-gradient(#630606 25%, transparent 50%);
   background-size: 70% 80%;
    background-position: 0 100%;
   animation: c2 10s infinite linear;
 }
 
 .c3 {
-  background:   radial-gradient(#4f8c83 25%, transparent 50%);
+  background:   radial-gradient(#890F0D 25%, transparent 50%);
     background-size: 80% 80%;
    background-position: 50% 0;
     animation: c3 5s infinite linear;
@@ -169,23 +169,23 @@ img#card-image {
   position: absolute;
   top: 400px;
 }
-button {
+.modal-btn {
   background-color: #394e5a;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  font-size: 15px;
-  padding: 10px 20px;
-  position: fixed;
-  bottom: 10%;
-  border-radius: 28px;
-  cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 10%;
+    border-radius: 28px;
+    cursor: pointer;
 }
 
 button:hover {
   background-color: #ffffff;
   color: #394e5a;
-  transition: 20ms ease-in-out;
+  transition: 10ms ease-in-out;
 }
 .modal {
   position: fixed;
@@ -198,9 +198,12 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.226);
   backdrop-filter: blur(30px) saturate(200%);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
-  width: 1700px;
+  width: 1600px;
   height: 800px;
   max-width: 80%;
+  max-height: 80vh;
+  overflow: scroll;
+  margin-top: 30px;
 }
 
 .modal.active {
@@ -222,13 +225,23 @@ button:hover {
   align-items: center;
 }
 
-.modal-header .close-button {
+.close-button {
+  color: white;
+  border: none;
   cursor: pointer;
-  font-size: 3.25rem;
+  font-size: 30px !important;
+  line-height: 0px !important;
   font-weight: 100;
   top: 2%;
   left: 90%;
   bottom: 90%;
+  background-color: #394e5a;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-body {
@@ -237,7 +250,6 @@ button:hover {
   color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  letter-spacing: 0.5px;
   word-break: break-all;
 }
 
@@ -297,7 +309,7 @@ a {
   color: rgba(134, 248, 248, 0.788);
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
  /* BACK BUTTON */
   a[href="/"] {
     font-size: 0.625rem !important;
@@ -357,4 +369,22 @@ a {
   .special-image {
     height: 10%;
   }
+}
+
+@media all and (max-width: 480px) {
+  .modal-body
+  {
+    word-break: break-all;
+    font-size: 10px !important;
+  }
+  .modal-header
+  {
+    padding: 23px 16px 19px 29px !important;
+  }
+  .close-button 
+  {
+    width: 60px !important;
+    height: 35px !important;
+  }
+
 }
