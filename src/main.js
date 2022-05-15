@@ -6,14 +6,9 @@ import './tailwind.css'
 
 import '@splidejs/splide/css'
 
-import 'splitting/dist/splitting.css'
-import 'splitting/dist/splitting-cells.css'
-
 import 'flowbite'
 
 import Splide from '@splidejs/splide'
-
-import Splitting from 'splitting'
 
 import { el, elall, log } from './util.js'
 
