@@ -10,7 +10,9 @@ export const navbar = (logoURL, bg = 'bg-transparent') => html`
     >
       <a href="https://www.rcciit.org/" class="flex items-center">
         <img src="${logoURL}" class="mr-3 h-9 w-5" alt="RCCIIT Logo" />
-        <p class="self-center whitespace-nowrap text-min-xs md:text-max-sm font-bold">
+        <p
+          class="self-center whitespace-nowrap text-min-xs font-bold md:text-max-sm"
+        >
           RCC Institute of Information Technology
           <span class="mt-1 block text-min-us font-medium sm:text-max-xs">
             Canal South Road. Beliaghata. Kolkata - 700 015
@@ -20,7 +22,7 @@ export const navbar = (logoURL, bg = 'bg-transparent') => html`
       <button
         data-collapse-toggle="mobile-menu"
         type="button"
-        class="ml-3 inline-flex items-center rounded-lg p-2 text-min-base md:text-min-base text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+        class="ml-3 inline-flex items-center rounded-lg p-2 text-min-base text-text hover:bg-accent focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden md:text-min-base"
         aria-controls="mobile-menu"
         aria-expanded="false"
       >
@@ -52,7 +54,7 @@ export const navbar = (logoURL, bg = 'bg-transparent') => html`
       </button>
       <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
         <ul
-          class="mt-4 flex flex-col overflow-hidden text-min-base md:text-min-base rounded-lg bg-background md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-sm md:font-medium"
+          class="md:text-sm mt-4 flex flex-col overflow-hidden rounded-lg bg-background text-min-base md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-min-base md:font-medium"
         >
           <li>
             <a

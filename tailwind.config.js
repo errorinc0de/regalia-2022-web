@@ -12,23 +12,23 @@ module.exports = {
         accent: '#0B74BF',
         debug: '#9D174D',
       },
-      fontSize: {
-        'min-xl': ['2.5rem'],
-        'min-lg': ['1.5rem'],
-        'min-base': ['1rem'],
-        'min-sm': ['0.75rem'],
-        'min-xs': ['0.625rem'],
-        'min-us': ['0.5rem'],
-
-        'max-xl': ['4.625rem'],
-        'max-lg': ['2.25rem'],
-        'max-base': ['1.5rem'],
-        'max-sm': ['1rem'],
-        'max-xs': ['0.75rem'],
-      },
     },
     fontFamily: {
       primary: ['Montserrat', ...defaultTheme.fontFamily.sans],
+    },
+    fontSize: {
+      'min-xl': ['2.5rem'],
+      'min-lg': ['1.5rem'],
+      'min-base': ['1rem'],
+      'min-sm': ['0.75rem'],
+      'min-xs': ['0.625rem'],
+      'min-us': ['0.5rem'],
+
+      'max-xl': ['4.625rem'],
+      'max-lg': ['2.25rem'],
+      'max-base': ['1.5rem'],
+      'max-sm': ['1rem'],
+      'max-xs': ['0.75rem'],
     },
     fontWeight: {
       light: 300,
