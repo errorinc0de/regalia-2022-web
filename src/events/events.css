@@ -190,8 +190,8 @@ button:hover {
   opacity: 1;
 }
 
-a {
-  color: rgba(134, 248, 248, 0.788);
+.modal-body a {
+  color: rgba(134, 248, 248, 0.788) !important;
 }
 
 @media screen and (max-width: 768px) {
