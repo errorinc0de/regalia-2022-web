@@ -6,33 +6,20 @@ import Splide from '@splidejs/splide'
 
 import '@splidejs/splide/css'
 
-import { render } from 'https://unpkg.com/lit-html?module'
-
-import { navbar } from './lib/navbar.js'
-
 import { el, elall, log } from './util.js'
-
-import logo from './images/logo_rcciit.png'
 
 const modules = import.meta.glob('./images/carousel/*.jpg')
 const gallery = []
 
 // swarasati PNB
 
-let bg = 'bg-transparent'
-
-onscroll = () => {
-  scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
-
-  render(navbar(logo, bg), document.body)
-}
-
-render(navbar(logo), document.body)
+onscroll = () =>
+  scrollY > 10 ? el('nav').classList.add('bg-background') : el('nav').classList.remove('bg-background') 
 
 for (const path in modules) {
   modules[path]().then(() => {
     const p = new URL(path, import.meta.url)
-    gallery.push(p)
+    gallery.push(p.href)
   })
 }
 
@@ -60,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // preloader animation
 const LANDING = {}
-LANDING.intro = document.querySelector('.preloader-page')
-LANDING.path = LANDING.intro.querySelector('path')
+LANDING.intro = el('.preloader-page')
+LANDING.path = el('path', LANDING.intro)
 
 const svgAnimation = () => {
   el('body').classList.remove('overflow-hidden')

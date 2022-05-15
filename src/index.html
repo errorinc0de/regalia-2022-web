@@ -153,6 +153,111 @@
     />
     <div class="absolute inset-0 z-[1] h-screen bg-background opacity-40"></div>
 
+    <!-- NAV -->
+    <nav
+      data-nav
+      class="fixed top-0 z-40 w-full transition-colors duration-200 ease-linear will-change-contents"
+    >
+      <div
+        class="flex flex-wrap items-center justify-between py-4 px-6 text-text md:px-12"
+      >
+        <a href="https://www.rcciit.org/" class="flex items-center">
+          <img src="./images/logo_rcciit.png" class="mr-3 h-9 w-5" alt="RCCIIT Logo" />
+          <p
+            class="self-center whitespace-nowrap text-min-xs font-bold md:text-max-sm"
+          >
+            RCC Institute of Information Technology
+            <span class="mt-1 block text-min-us font-medium sm:text-max-xs">
+              Canal South Road. Beliaghata. Kolkata - 700 015
+            </span>
+          </p>
+        </a>
+        <button
+          data-collapse-toggle="mobile-menu"
+          type="button"
+          class="ml-3 inline-flex items-center rounded-lg p-2 text-min-base text-text md:hover:bg-accent active:outline-none active:ring-2 active:ring-accent md:hidden md:text-min-base"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="hidden h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+          <ul
+            class="md:text-sm mt-4 flex flex-col overflow-hidden rounded-lg bg-background text-min-base md:mt-0 md:flex-row md:space-x-8 md:bg-transparent md:text-min-base md:font-medium"
+          >
+            <li>
+              <a
+                href="#home"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#artist"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Artist"
+                >Artist</a
+              >
+            </li>
+            <li>
+              <a
+                href="events/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Events</a
+              >
+            </li>
+            <li data-wip>
+              <a
+                href="about/"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="block border-b border-text py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block py-2 pr-4 pl-3 text-text active:bg-accent md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-accent"
+                aria-current="Contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- HOME -->
     <section
       data-home
@@ -161,13 +266,13 @@
     >
       <div class="z-10 px-6 md:px-12">
         <div class="mt-6">
-          <p class="text-min-base font-medium md:text-max-base">
+          <p data-sub-title class="text-min-base font-medium md:text-max-base">
             Presenting the annual cultural fest
           </p>
-          <h1 class="text-min-xl font-black md:text-max-xl">Regalia '22</h1>
+          <h1 data-title class="text-min-xl font-black md:text-max-xl">Regalia '22</h1>
         </div>
 
-        <div class="mt-6 text-min-lg font-bold md:text-max-lg">
+        <div data-text class="mt-6 text-min-lg font-bold md:text-max-lg">
           <h3>Relive.</h3>
           <h3>Rejoice.</h3>
           <h3>Rejuvenate.</h3>
@@ -178,6 +283,7 @@
           class="mt-8 flex items-center space-x-6 text-center text-min-sm font-medium text-background md:mt-12 md:text-max-sm"
         >
           <a
+            data-btn-event
             href="events/"
             class="rounded-lg bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 px-5 py-2.5 hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-red-100 md:px-6 md:py-3"
             >See events</a
@@ -192,7 +298,7 @@
         </div>
 
         <div class="absolute bottom-16 md:right-12">
-          <div class="h-40 w-40 sm:ml-auto sm:h-48 sm:w-48">
+          <div data-guitar-image class="h-40 w-40 sm:ml-auto sm:h-48 sm:w-48">
             <img
               class="block h-full w-full"
               src="./images/logo_regalia.png"
@@ -200,10 +306,10 @@
               aria-hidden="true"
             />
           </div>
-          <p class="mt-1 text-min-base font-light md:text-right md:text-max-lg">
+          <p data-guitar-date class="mt-1 text-min-base font-light md:text-right md:text-max-lg">
             19 to 20 May
           </p>
-          <div class="flex items-center space-x-2 text-min-base md:text-max-lg">
+          <div data-guitar-location class="flex items-center space-x-2 text-min-base md:text-max-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 sm:h-8 sm:w-8"
@@ -350,121 +456,121 @@
           <ul data-carousel class="splide__list w-full will-change-transform">
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/1.jpg"
+                data-splide-lazy="images/carousel/1.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/2.jpg"
+                data-splide-lazy="images/carousel/2.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/3.jpg"
+                data-splide-lazy="images/carousel/3.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/4.jpg"
+                data-splide-lazy="images/carousel/4.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/5.jpg"
+                data-splide-lazy="images/carousel/5.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/6.jpg"
+                data-splide-lazy="images/carousel/6.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/7.jpg"
+                data-splide-lazy="images/carousel/7.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/8.jpg"
+                data-splide-lazy="images/carousel/8.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/9.jpg"
+                data-splide-lazy="images/carousel/9.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/10.jpg"
+                data-splide-lazy="images/carousel/10.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/11.jpg"
+                data-splide-lazy="images/carousel/11.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/12.jpg"
+                data-splide-lazy="images/carousel/12.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/13.jpg"
+                data-splide-lazy="images/carousel/13.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/14.jpg"
+                data-splide-lazy="images/carousel/14.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="./images/carousel/15.jpg"
+                data-splide-lazy="./images/carousel/15.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/16.jpg"
+                data-splide-lazy="images/carousel/16.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/17.jpg"
+                data-splide-lazy="images/carousel/17.jpg"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/18.jpg"
+                data-splide-lazy="images/carousel/18.jpg"
                 class="block h-full w-full rounded-lg object-cover object-top"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/19.jpg"
+                data-splide-lazy="images/carousel/19.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
             <li class="splide__slide" data-splide-interval="2000">
               <img
-                src="images/carousel/20.jpg"
+                data-splide-lazy="images/carousel/20.jpg"
                 class="block h-full w-full rounded-lg object-cover object-center"
               />
             </li>
