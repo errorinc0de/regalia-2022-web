@@ -1,32 +1,42 @@
-// Hide "artist" section and link
-// remove the line when completed
-elall('[data-wip]').forEach(el => el.classList.add('hidden'))
-
 import './build.css'
-
-import '@splidejs/splide/css'
 
 import 'flowbite'
 
 import Splide from '@splidejs/splide'
 
+import '@splidejs/splide/css'
+
+import { render } from 'https://unpkg.com/lit-html?module'
+
+import { navbar } from './lib/navbar.js'
+
 import { el, elall, log } from './util.js'
 
-import humans from '../humans.txt'
+import logo from './images/logo_rcciit.png'
 
-// TODO: add text animations
-// Splitting()
+const modules = import.meta.glob('./images/carousel/*.jpg')
+const gallery = []
 
-onscroll = () =>
-  scrollY > 10
-    ? el('nav').classList.add('bg-background')
-    : el('nav').classList.remove('bg-background')
+// swarasati PNB
 
-onload = () => {
-  el('.preloader-page').classList.remove('cursor-default')
-  el('.loader__text > p').textContent = 'Click to begin'
-  el('.preloader-page').addEventListener('click', svgAnimation)
+let bg = 'bg-transparent'
 
+onscroll = () => {
+  scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
+
+  render(navbar(logo, bg), document.body)
+}
+
+render(navbar(logo), document.body)
+
+for (const path in modules) {
+  modules[path]().then(() => {
+    const p = new URL(path, import.meta.url)
+    gallery.push(p)
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
   new Splide('.splide', {
     perPage: 2,
     type: 'loop',
@@ -46,14 +56,32 @@ onload = () => {
       },
     },
   }).mount()
-}
+})
 
 // preloader animation
 const LANDING = {}
-LANDING.intro = el('.preloader-page')
-LANDING.path = el('path', LANDING.intro)
+LANDING.intro = document.querySelector('.preloader-page')
+// LANDING.path = LANDING.intro.querySelector('path')
+
+jQuery(window).load(function () {
+  if (sessionStorage.getItem('dontLoad') == null) {
+    sessionStorage.setItem('dontLoad', true)
+
+    el('body').classList.add('overflow-hidden')
+    $('.preloader-page').css('display', 'block')
+
+    setTimeout(() => {
+      svgAnimation()
+    }, 3000)
+  } else {
+    el('body').classList.remove('overflow-hidden')
+    $('.preloader-page').css('display', 'none')
+    $('.main-body').css('display', 'block')
+  }
+})
 
 const svgAnimation = () => {
+  $('.main-body').css('display', 'block')
   el('body').classList.remove('overflow-hidden')
 
   anime({
@@ -70,3 +98,10 @@ const svgAnimation = () => {
     d: LANDING.path.getAttribute('pathdata:id'),
   })
 }
+
+el('.preloader-page') &&
+  el('.preloader-page').addEventListener('click', svgAnimation)
+
+// Hide "artist" section and link
+// remove the line when completed
+elall('[data-wip]').forEach(el => el.classList.add('hidden'))
