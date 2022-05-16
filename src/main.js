@@ -1,4 +1,4 @@
-import './build.css'
+import './tailwind.css'
 
 import 'flowbite'
 
@@ -6,11 +6,7 @@ import '@splidejs/splide/css'
 
 import Splide from '@splidejs/splide'
 
-import {
-  el,
-  elall,
-  log
-} from './util.js'
+import { el, elall, log } from './util.js'
 
 import humans from '../humans.txt'
 import webManifest from './site.webmanifest'
@@ -19,8 +15,9 @@ import webManifest from './site.webmanifest'
 // Splitting()
 
 onscroll = () =>
-  scrollY > 10 ? el('nav').classList.add('bg-background') : el('nav').classList.remove('bg-background')
-
+  scrollY > 10
+    ? el('nav').classList.add('bg-background')
+    : el('nav').classList.remove('bg-background')
 
 if (!('dontLoad' in sessionStorage)) {
   el('.preloader-page').style.display = 'block'
