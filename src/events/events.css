@@ -121,7 +121,6 @@ button:hover {
   max-height: 80vh;
   overflow: scroll;
   margin-top: 30px;
-  
 }
 
 .modal.active {
@@ -145,7 +144,7 @@ button:hover {
   align-items: center;
 }
 
- .close-button {
+.close-button {
   cursor: pointer;
   font-size: 30px !important;
   line-height: 0px !important;
@@ -195,11 +194,6 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-  /* BACK BUTTON */
-  a[href='/'] {
-    font-size: 0.625rem !important;
-  }
-
   div.headtext {
     display: flex;
     justify-content: flex-start;
@@ -254,21 +248,15 @@ button:hover {
   }
 }
 
-
-
 @media all and (max-width: 480px) {
-  .modal-body
-  {
+  .modal-body {
     font-size: 10px !important;
   }
-  .modal-header
-  {
+  .modal-header {
     padding: 23px 16px 19px 29px !important;
   }
-  .close-button 
-  {
+  .close-button {
     width: 60px !important;
     height: 35px !important;
   }
-
 }

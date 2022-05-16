@@ -1,7 +1,16 @@
 import '../tailwind.css'
 import './events.css'
 
+import 'flowbite'
+
+import { render } from 'https://unpkg.com/lit-html?module'
+
+import { navbar } from '../lib/navbar.js'
+
+import logo from '../images/logo_rcciit.png'
 import bg from './images/bg.webp'
+
+render(navbar(logo, 'bg-background', '/'), document.body)
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -39,3 +48,7 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+document
+  .querySelectorAll('[data-wip]')
+  .forEach(el => el.classList.add('hidden'))

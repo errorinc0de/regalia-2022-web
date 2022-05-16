@@ -1,23 +1,34 @@
 import './tailwind.css'
 
-import 'flowbite'
-
 import '@splidejs/splide/css'
+
+import 'flowbite'
 
 import Splide from '@splidejs/splide'
 
+import { render } from 'https://unpkg.com/lit-html?module'
+
+import { navbar } from './lib/navbar.js'
+
 import { el, elall, log } from './util.js'
 
+import logo from './images/logo_rcciit.png'
 import humans from '../humans.txt'
 import webManifest from './site.webmanifest'
 
 // TODO: add text animations
 // Splitting()
+//
+//
+let bg = 'bg-transparent'
 
-onscroll = () =>
-  scrollY > 10
-    ? el('nav').classList.add('bg-background')
-    : el('nav').classList.remove('bg-background')
+onscroll = () => {
+  scrollY > 10 ? (bg = 'bg-background') : (bg = 'bg-transparent')
+
+  render(navbar(logo, bg), document.body)
+}
+
+render(navbar(logo), document.body)
 
 if (!('dontLoad' in sessionStorage)) {
   el('.preloader-page').style.display = 'block'
@@ -27,6 +38,7 @@ if (!('dontLoad' in sessionStorage)) {
 }
 
 onload = () => {
+  el('[data-container]').style.display = 'block'
   el('.preloader-page').style.cursor = 'pointer'
   el('.preloader-page').addEventListener('click', svgAnimation)
   el('.loader__text > p').textContent = 'Click to begin'
@@ -59,6 +71,7 @@ LANDING.path = el('path', LANDING.intro)
 
 const svgAnimation = () => {
   el('body').style.removeProperty('overflow')
+  el('[data-container]').style.removeProperty('display')
 
   anime({
     targets: LANDING.intro,
