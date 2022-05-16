@@ -1,3 +1,4 @@
+import '../tailwind.css'
 import './events.css'
 
 import bg from './images/bg.webp'
