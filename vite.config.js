@@ -13,9 +13,7 @@ module.exports = defineConfig({
         about: resolve(__dirname, 'src', 'about/index.html'),
         events: resolve(__dirname, 'src', 'events/index.html'),
       },
-      external: [
-      	'humans.txt'
-      ]
+      external: ['humans.txt'],
     },
   },
 })

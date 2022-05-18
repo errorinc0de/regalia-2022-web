@@ -10,6 +10,7 @@ module.exports = {
         background: '#0D0D0D',
         text: '#F2F2F2',
         accent: '#0B74BF',
+        gray: '#737373',
         debug: '#9D174D',
       },
     },
@@ -37,6 +38,10 @@ module.exports = {
       bold: 700,
       black: 900,
     },
+    textUnderlineOffset: {
+      0:  '0px',
+      1: '0.75rem'
+    }
   },
   plugins: [require('flowbite/plugin')],
 }
